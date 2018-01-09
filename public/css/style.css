@@ -20,6 +20,12 @@
   margin: 0;
   font-size: 120px;
 }
+.h2 {
+  margin: 0;
+  font-family: William;
+  font-size: 45px;
+  line-height: 1.1;
+}
 .icon-social:hover .icon-social__circle {
   fill: #fff;
 }
@@ -175,6 +181,36 @@
 .ui-lang-switcher__item_current {
   display: none;
 }
+.nav-tabs__list {
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.nav-tabs__item {
+  padding: 10px;
+  border-right: 2px solid #fff;
+}
+.nav-tabs__item_active,
+.nav-tabs__item:hover {
+  background: rgba(255,255,255,0.533);
+}
+.nav-tabs__item:first-child {
+  padding-left: 20px;
+}
+.nav-tabs__item:last-child {
+  border-right: none;
+  padding-right: 20px;
+}
+.nav-tabs__link {
+  color: inherit;
+  text-decoration: none;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -231,9 +267,6 @@
 }
 .section-main__slogan {
   margin-bottom: 125px;
-  font-family: William;
-  font-size: 45px;
-  line-height: 1.1;
 }
 .section-main__foo {
   display: -webkit-box;
@@ -268,6 +301,29 @@
 .section-news__button {
   margin-bottom: 45px;
 }
+.section-invest-map {
+  padding: 60px 0 25px;
+  background: #929292 url("../images/bg-invest-map.jpg") center center/cover;
+  color: #fff;
+}
+.section-invest-map__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section-invest-map__title {
+  margin-bottom: 90px;
+}
+.section-invest-map__desc {
+  font-size: 22px;
+}
+.section-invest-map__column_desc {
+  width: 475px;
+}
+.section-invest-map__tabs {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 .nav-top {
   font-family: Suisse;
   font-size: 20px;
@@ -287,6 +343,18 @@
 }
 .nav-top__link:hover {
   text-decoration: underline;
+}
+.list-line {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.list-line__item {
+  padding: 15px 0;
+  border-top: 2px solid #fff;
+}
+.list-line__item:last-child {
+  border-bottom: 2px solid #fff;
 }
 .nav-social__list {
   display: -webkit-box;

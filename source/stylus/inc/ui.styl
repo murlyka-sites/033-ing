@@ -141,3 +141,39 @@
 		}
 	}
 }
+
+.nav-tabs {
+	&__list {
+		list-style-type none
+		display inline-flex
+		padding 0
+		margin 0
+		border 2px solid white
+		border-radius 30px
+		overflow hidden
+	}
+	
+	&__item {
+		padding 10px 
+		border-right 2px solid white
+		
+		&_active,
+		&:hover {
+			background #fff8
+		}
+		
+		&:first-child {
+			padding-left 20px 
+		}
+		
+		&:last-child {
+			border-right none
+			padding-right 20px 
+		}
+	}
+	
+	&__link {
+		color inherit
+		text-decoration none
+	}
+}

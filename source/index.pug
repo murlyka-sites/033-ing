@@ -46,7 +46,7 @@ html(lang="ru")
 				| область —
 				br
 				| регион развития
-			.section-main__slogan 14,84 млрд. руб. 
+			p.section-main__slogan.h2 14,84 млрд. руб. 
 				br
 				| будет инвестировано 
 				br
@@ -116,6 +116,22 @@ html(lang="ru")
 							.card-news__column.card-news__column_desc
 								time.card-news__date() 5–6  ДЕКАБРЯ 2018
 								a.card-news__title(href="#") Великий Новгород вновь примет хоккейный турнир четырех наций
+		section.section.section-invest-map: .section__container.section-invest-map__container
+			.section-invest-map__column.section-invest-map__column_desc
+				h2.h2.section-invest-map__title Инвестиционная карта
+				ul.section-invest-map__desc.list-line
+					li.list-line__item 30 млн. человек в радиусе 500 км.
+					li.list-line__item Федеральная трасса М10 (Москва-Санкт-Петербург) и скоростная трасса М11.
+					li.list-line__item 1 час до Санкт-Петербурга.
+					li.list-line__item 3 часа до Москвы.
+					li.list-line__item 200 км до аэропорта Пулково и порта на Балтийском море.
+					li.list-line__item Выход на рынки Белоруссии, Восточной и Западной Европы.
+			.section-invest-map__column.section-invest-map__column_map
+				nav.section-invest-map__tabs.nav-tabs
+					ul.nav-tabs__list
+						li.nav-tabs__item.nav-tabs__item_active: a.nav-tabs__link.nav-tabs__link_active(href="#") Россия
+						li.nav-tabs__item: a.nav-tabs__link(href="#") Область
+				img.section-invest-map__map(src="images/invest-map.png" width="725" height="688")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 	script(src="js/main.js")
 		
