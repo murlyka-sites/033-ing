@@ -12,3 +12,7 @@ $(".ui-lang-switcher__current").click(function() {
 $(".ui-lang-switcher__item").click(function() {
 
 });
+
+$(".menu").click(function() {
+	$(this).toggleClass("menu_cross");
+})

@@ -1,20 +1,51 @@
 .h1 {
 	margin 0
-	font-size 120px 
+	font-family 'William Display' 
+	font-size 40px
+	line-height 0.83
+	
+	@media (min-width $sm) {
+		font-size 50px
+	}
+	
+	@media (min-width $md) {
+		font-size 60px 
+	}
+	
+	@media (min-width $lg) {
+		font-size 80px
+	}
+	
+	@media (min-width $mlg) {
+		font-size 120px 
+	}
 }
 
 .h2 {
 	margin 0
 	font-family William 
-	font-size 45px 
-	line-height 1.1 
+	font-size 20px
+	line-height 1.1	
+	
+	@media (min-width $sm) {
+		font-size 25px
+	}
+	
+	@media (min-width $md) {
+		font-size 40px 
+	}
+	
+	@media (min-width $mlg) {
+		font-size 45px 
+	}
 }
 
 .icon-social {
+	border 2px solid white
+	border-radius 50%
+	
 	&:hover {
-		.icon-social__circle {
-			fill white
-		}
+		background white
 		
 		.icon-social__path {
 			fill $color-dark

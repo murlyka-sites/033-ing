@@ -21,7 +21,10 @@
 
 .section {
 	&__container {
-		padding 0 30px  
+		padding 0 10px 
+		@media (min-width $md) {
+			padding 0 30px 
+		}
 	}
 }
 
@@ -31,7 +34,7 @@
 	top 0
 	left 0
 	width 100%
-	padding 20px 0 
+	padding 20px 0
 	
 	&__container {
 		display flex
@@ -40,46 +43,138 @@
 	}
 	
 	&__column {
+		&_menu {
+			margin-right auto 
+			stroke white
+			
+			@media (min-width $md) {
+				display none
+			}
+		}
+		
+		&_nav {
+			display none
+			
+			@media (min-width $md) {
+				display block
+				margin-right auto 
+			}
+		}
+		
+		&_social {
+			display none
+			
+			@media (min-width $xs) {
+				display block
+			}
+			
+			@media (min-width $md) {
+				display none
+			}
+		}
+		
 		&_search {
-			margin-left auto
-			margin-right 25px
+			
+		}
+		
+		&_lang {
+			display none
+			
+			@media (min-width $sm) {
+				display block
+				margin-left 15px
+			}
 		}
 	}
 	
 	&__search {
-		width 150px
+		width 50px
+		margin-left 10px 
+		
+		@media (min-width $sm) {
+			margin-left 15px
+		}
+		
+		@media (min-width $lg) {
+			width 150px
+			margin-left 60px 
+			flex auto
+		}
+		
+		@media (min-width $xlg) {
+			width 350px
+		}
 	}
 }
 
 .section-main {
-	padding 100px 0 55px
-	min-height 100vh 
+	display flex
+	flex-direction column
+	padding 150px 0 55px
 	background url(../images/bg-main.jpg) center center / cover
 	color white
+	text-align center
+	
+	@media (min-width $sm) {
+		min-height 100vh 
+		padding 100px 0 55px
+		text-align left
+	}
+	
+	@media (min-width $xlg) {
+		padding 150px 0 55px
+	}
+	
+	&__container {		
+		@media (min-width $sm) {
+			flex auto
+			display flex
+			flex-direction column
+			justify-content space-between
+			height 100%
+		}
+	}
 	
 	&__title {
-		margin-bottom 45px 
-		font-family 'William Display' 
-		font-size 120px	
-		line-height 0.83
+		margin-bottom 25px
 		font-weight normal 
+		
+		@media (min-width $md) {
+			margin-bottom 45px
+		}
 	}
 	
 	&__slogan {
-		margin-bottom 125px
+		margin-bottom 50px
+		
+		@media (min-width $md) {
+			margin-bottom 125px
+		}
 	}
 	
 	&__foo {
-		display flex
-		
+		@media (min-width $md) {
+			display flex
+		}
 	}
 	
-	&__social {
-		margin-left auto
+	&__buttons {
+		margin-bottom 15px 
 	}
 	
 	&__button {
+		margin-bottom 5px 
 		margin-right 15px 
+	}
+	
+	&__social {
+		display none
+		
+		
+		@media (min-width $md) {
+			display block
+			margin-left auto
+		}
 	}
 }
 
@@ -144,8 +239,19 @@
 }
 
 .nav-top {
-	font-family Suisse
-	font-size 20px
+	
+	@media (min-width $md) {
+		font-family Suisse
+		font-size 18px
+	}
+	
+	@media (min-width $mlg) {
+		font-size 20px
+	}
+	
+	@media (min-width $xlg) {
+		font-size 25px
+	}
 	
 	&__list {
 		display flex
@@ -154,10 +260,21 @@
 		list-style-type none 
 	}
 	
+	&__item { 
+		margin-right 12px 
+	
+		@media (min-width $lg) {
+			margin-right 15px 
+		}
+		
+		@media (min-width $xlg) {
+			margin-right 20px 
+		}
+	}
+	
 	&__link {
-		margin-right 15px 
 		color white
-		text-decoration none
+		text-decoration none		
 		
 		&:hover {
 			text-decoration underline
@@ -189,7 +306,11 @@
 	}
 	
 	&__item {
-		margin-right 15px 
+		margin-right 10px 
+		
+		@media (min-width $sm) {
+			margin-right 15px 
+		}
 		
 		&:last-child {
 			margin-right 0 
@@ -198,6 +319,11 @@
 	
 	&__link {
 		display block
+	}
+	
+	&__icon {
+		width 49px 
+		height auto
 	}
 }
 
