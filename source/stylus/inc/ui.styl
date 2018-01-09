@@ -8,9 +8,19 @@
 	&_size {
 		&_sm {
 			padding 15px 20px 13px
-			font-size 20px 
+			font-size 16px 
 			line-height 1.2 
 			border-radius 30px
+			
+			@media (min-width $sm) {
+				font-size 20px 
+			}
+			
+			@media(min-width $xlg) {
+				padding 20px  30px 18px
+				border-radius 45px
+				font-size 25px 
+			}
 		}
 	}
 	
@@ -152,11 +162,19 @@
 		border 2px solid white
 		border-radius 30px
 		overflow hidden
+		
+		@media (min-width $xlg) {
+			border-radius 50px
+		}
 	}
 	
 	&__item {
 		padding 10px 
 		border-right 2px solid white
+		
+		@media (min-width $xlg) {
+			padding 25px 
+		}
 		
 		&_active,
 		&:hover {
@@ -165,11 +183,19 @@
 		
 		&:first-child {
 			padding-left 20px 
+			
+			@media (min-width $xlg) {
+				padding-left 40px
+			}
 		}
 		
 		&:last-child {
 			border-right none
 			padding-right 20px 
+			
+			@media (min-width $xlg) {
+				padding-right 40px
+			}
 		}
 	}
 	

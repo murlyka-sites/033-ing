@@ -19,6 +19,10 @@
 	@media (min-width $mlg) {
 		font-size 120px 
 	}
+	
+	@media (min-width $mlg) {
+		font-size 150px 
+	}
 }
 
 .h2 {
@@ -38,6 +42,10 @@
 	@media (min-width $mlg) {
 		font-size 45px 
 	}
+	
+	@media (min-width $xlg) {
+		font-size 60px 
+	}
 }
 
 .icon-social {
@@ -49,6 +57,25 @@
 		
 		.icon-social__path {
 			fill $color-dark
+		}
+	}
+}
+
+.list-line {
+	list-style-type none
+	padding 0
+	margin 0
+	
+	&__item {
+		padding 15px 15px 15px 0
+		border-top 2px solid white
+		
+		@media (min-width $lg) {
+			padding 15px 30% 15px 0
+		}
+		
+		&:last-child {
+			border-bottom 2px solid white 
 		}
 	}
 }
