@@ -1,0 +1,275 @@
+.section-header {
+	position absolute
+	z-index 10
+	top 0
+	left 0
+	width 100%
+	padding 20px 0
+	
+	&__container {
+		display flex
+		align-items center
+		justify-content flex-start
+	}
+	
+	&__column {
+		&_menu {
+			margin-right auto 
+			stroke white
+			
+			@media (min-width $md) {
+				display none
+			}
+		}
+		
+		&_nav {
+			display none
+			
+			@media (min-width $md) {
+				display block
+				margin-right auto 
+			}
+		}
+		
+		&_social {
+			display none
+			
+			@media (min-width $xs) {
+				display block
+			}
+			
+			@media (min-width $md) {
+				display none
+			}
+		}
+		
+		&_search {
+			
+		}
+		
+		&_lang {
+			display none
+			
+			@media (min-width $sm) {
+				display block
+				margin-left 15px
+			}
+		}
+	}
+	
+	&__search {
+		width 50px
+		margin-left 10px 
+		
+		@media (min-width $sm) {
+			margin-left 15px
+		}
+		
+		@media (min-width $lg) {
+			width 150px
+			margin-left 60px 
+			flex auto
+		}
+		
+		@media (min-width $xlg) {
+			width 350px
+		}
+	}
+}
+
+.section-news {
+	padding 40px 0 20px
+	background #edecea
+	
+	&__container {
+		@media (min-width $sm) {
+			display flex
+		}
+	}
+	
+	&__column {
+		@media (min-width $sm) {
+			width 50%
+			margin-right 20px 
+		}
+		
+		&:last-child  {
+			margin-right 0
+		}
+	}
+	
+	&__card {
+		margin-bottom 20px 
+		
+		@media (min-width $md) {
+			margin-bottom 40px 
+		}
+
+		@media (min-width $xlg) {
+			margin-bottom 65px 
+		}
+	}
+	
+	&__button {
+		margin-bottom 30px 
+		
+		@media (min-width $lg) {
+			margin-bottom 45px
+		}
+	}
+}
+
+.section-main {
+	display flex
+	flex-direction column
+	padding 150px 0 55px
+	background url(../images/bg-main.jpg) center center / cover
+	color white
+	text-align center
+	
+	@media (min-width $sm) {
+		min-height 100vh 
+		padding 100px 0 55px
+		text-align left
+	}
+	
+	@media (min-width $xlg) {
+		padding 150px 0 55px
+	}
+	
+	&__container {		
+		@media (min-width $sm) {
+			flex auto
+			display flex
+			flex-direction column
+			justify-content space-between
+			height 100%
+		}
+	}
+	
+	&__title {
+		margin-bottom 25px
+		font-weight normal 
+		
+		@media (min-width $md) {
+			margin-bottom 45px
+		}
+	}
+	
+	&__slogan {
+		margin-bottom 50px
+		
+		@media (min-width $md) {
+			margin-bottom 125px
+		}
+	}
+	
+	&__foo {
+		@media (min-width $md) {
+			display flex
+		}
+	}
+	
+	&__buttons {
+		margin-bottom 15px 
+	}
+	
+	&__button {
+		margin-bottom 5px 
+		margin-right 15px 
+	}
+	
+	&__social {
+		display none
+		
+		
+		@media (min-width $md) {
+			display block
+			margin-left auto
+		}
+	}
+}
+
+.section-invest-map {
+	padding 40px 0 20px
+	background #929292 url(../images/bg-invest-map.jpg) center  center / cover
+	color white
+	
+	@media (min-width $sm) {
+		padding 60px 0 25px
+	}
+	
+	&__container {
+		@media (min-width $sm) {
+			display flex
+		}
+	}
+	
+	&__column {
+		&_desc {
+			@media (min-width $sm) {
+				width 50%
+				flex none
+				padding-top 5px 
+				margin-right 20px	
+			}
+			
+			@media (min-width $md) {
+				width 40%
+				padding-top 0
+			}
+			
+			@media (min-width $xlg) {
+				margin-right 75px 
+			}
+		}
+		
+		&_map {
+			flex auto
+		}
+	}
+	
+	&__title {
+		margin-bottom 40px
+		
+		@media (min-width $lg) {
+			margin-bottom 90px
+		}
+	}
+	
+	&__desc {
+		margin-bottom 40px
+		font-size 15px
+		
+		@media (min-width $sm) { 
+			font-size 18px
+		}
+		
+		@media (min-width $lg) {
+			font-size 22px
+		}
+		
+		@media (min-width $xlg) {
+			font-size 35px 
+		}
+	}
+	
+	&__tabs {
+		margin-left 20px
+		margin-bottom 50px 
+		
+		@media (min-width $lg) {
+			margin-bottom 10px 
+		}
+		
+		@media (min-width $xlg) {
+			margin-bottom 50px 
+		}
+	}
+	
+	&__map {
+		width 100% 
+		height auto
+		max-width 850px
+	}
+}
