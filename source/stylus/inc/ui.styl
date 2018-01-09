@@ -1,0 +1,132 @@
+.button {
+	display inline-block
+	font-family Suisse 
+	border none
+	text-decoration none
+
+	&_size {
+		&_sm {
+			padding 15px 20px
+			font-size 20px 
+			line-height 1.2 
+			border-radius 30px
+		}
+	}
+	
+	&_outline {
+		border 2px solid white
+	}
+	
+	&_theme {
+		&_outline {
+			&-white {
+				color white
+				text-decoration none
+				
+				&:hover {
+					background white
+					color $color-dark 
+				}
+			}
+		}
+	}
+}
+
+.button-with-icon {
+	padding 0
+	background transparent 
+	border none
+		
+	&__svg {
+		stroke currentColor
+	}
+}
+
+.ui-search-top {
+	position relative
+	color white
+	
+	&__field {
+		display block
+		width 100%
+		height 45px
+		padding 0 25px 
+		border-radius 25px
+		border 2px solid white
+		background transparent 
+		text-align right
+		color white
+		font-family Suisse
+		font-size 15px		
+		placeholder white
+		
+	}
+	
+	&__button {
+		position absolute
+		top 50%
+		transform translate(0,-50%)
+		left 10px
+		width 26px
+		height 26px
+		color white
+		
+		&:hover {
+			color darken(white, 20%)
+		}
+	}
+}
+
+.ui-lang-switcher {
+	position relative
+	border 2px solid white
+	color white
+	font-family Suisse
+	border-radius 25px
+	display flex
+	flex-direction column
+	align-items center
+	
+	&_open {
+	}
+	
+	&__current {
+		display flex
+		align-items center
+		height 45px
+		padding 0 25px
+	}
+	
+	&__corner {
+		margin-left 10px
+	}
+	
+	&__list {
+		padding-top 45px 
+		top -2px
+		left -2px
+		right -2px
+		border-radius 25px
+		border 2px solid
+		position absolute
+		overflow hidden
+		z-index -1  
+	}
+	
+	&__item {
+		display flex
+		align-items center
+		height 45px
+		padding 0 25px
+		border-radius 25px
+		
+		&:hover {
+			background white
+			color black 
+		}
+		
+		&_current {
+			display none
+		}
+	}
+}

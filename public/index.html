@@ -7,7 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/style.css?ts=undefined">
   </head>
-  <body class="page"></body>
+  <body class="page">
+    <header class="section section-header">
+      <div class="section__container section-header__container">
+        <div class="section-header__column section-header__column_nav">
+          <nav class="nav-top">
+            <ul class="nav-top__list">
+              <li class="nav-top__item"><a class="nav-top__link" href="#">О регионе</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Новости</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Карта</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Преимущества</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Проекты</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Истории успеха</a></li>
+              <li class="nav-top__item"><a class="nav-top__link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="section-header__column section-header__column_search">
+          <div class="ui-search-top section-header__search">
+            <button class="ui-search-top__button button-with-icon">
+              <svg class="button-with-icon__svg" width="26" height="26">
+                <circle cx="13" cy="13" r="11" fill="none" stroke-width="2"></circle>
+                <line x1="20" y1="20" x2="26" y2="26" stroke-width="2"></line>
+              </svg>
+            </button>
+            <input class="ui-search-top__field" type="search" placeholder="Поиск">
+          </div>
+        </div>
+        <div class="section-header__column section-header__column_lang">
+          <div class="ui-lang-switcher ui-lang-switcher_open">
+            <div class="ui-lang-switcher__current">Eng
+              <button class="ui-lang-switcher__corner button-with-icon">
+                <svg class="button-with-icon__svg" width="13" height="8">
+                  <path d="M 1 1 7 7 13 1" stroke="white" stroke-width="2" fill="none"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="ui-lang-switcher__list">
+              <div class="ui-lang-switcher__item ui-lang-switcher__item_current">Eng</div>
+              <div class="ui-lang-switcher__item">Рус</div>
+              <div class="ui-lang-switcher__item">Укр</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section section-main">
+      <div class="section__container">
+        <h1 class="h1 section-main__title">Новгородская <br>область —<br>регион развития</h1>
+        <div class="section-main__slogan">14,84 млрд. руб. <br>будет инвестировано <br>в 2018 году</div>
+        <footer class="section-main__foo">
+          <div class="section-main__buttons"><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Прямая линия с губернатором</a><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Получить поддержку</a></div>
+          <div class="section-main__social">
+            <nav class="nav-social">
+              <ul class="nav-social__list">
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="icon-social" width="56.3" height="56.3">
+                      <circle class="icon-social__circle" cx="28.15" cy="28.15" r="27.44" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"></circle>
+                      <path class="icon-social__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="icon-social" width="56.3" height="56.3">
+                      <circle class="icon-social__circle" cx="28.15" cy="28.15" r="27.44" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"></circle>
+                      <path class="icon-social__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="icon-social" width="56.3" height="56.3">
+                      <circle class="icon-social__circle" cx="28.15" cy="28.15" r="27.44" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1.42"></circle>
+                      <path class="icon-social__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
+                    </svg></a></li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </html>

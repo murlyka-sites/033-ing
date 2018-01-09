@@ -1,3 +1,132 @@
+@import "inc/variables"
+@import "inc/mixins"
+@import "inc/fonts"
+@import "inc/scafolding"
+@import "inc/ui"
+
+
+* {
+	box-sizing border-box
+}
+
+.hidden {
+	display none !important
+}
+
 .page {
-	background red 
+	padding 0
+	margin 0
+	font-family Suisse 
+}
+
+.section {
+	&__container {
+		padding 0 30px  
+	}
+}
+
+.section-header {
+	position absolute
+	z-index 10
+	top 0
+	left 0
+	width 100%
+	padding 20px 0 
+	
+	&__container {
+		display flex
+		align-items center
+		justify-content flex-start
+	}
+	
+	&__column {
+		&_search {
+			margin-left auto
+			margin-right 25px
+		}
+	}
+	
+	&__search {
+		width 150px
+	}
+}
+
+
+
+.section-main {
+	padding 100px 0 55px
+	min-height 100vh 
+	background url(../images/bg-main.jpg) center center / cover
+	color white
+	
+	&__title {
+		margin-bottom 45px 
+		font-family 'William Display' 
+		font-size 120px	
+		line-height 0.83
+		font-weight normal 
+	}
+	
+	&__slogan {
+		margin-bottom 125px 
+		font-family William 
+		font-size 45px 
+		line-height 1.1 
+	}
+	
+	&__foo {
+		display flex
+		
+	}
+	
+	&__social {
+		margin-left auto
+	}
+	
+	&__button {
+		margin-right 15px 
+	}
+}
+
+.nav-top {
+	font-family Suisse
+	font-size 20px
+	
+	&__list {
+		display flex
+		padding 0
+		margin 0
+		list-style-type none 
+	}
+	
+	&__link {
+		margin-right 15px 
+		color white
+		text-decoration none
+		
+		&:hover {
+			text-decoration underline
+		}
+	}
+}
+
+.nav-social {
+	&__list {
+		display flex
+		list-style-type none
+		padding 0
+		margin 0
+	}
+	
+	&__item {
+		margin-right 15px 
+		
+		&:last-child {
+			margin-right 0 
+		}
+	}
+	
+	&__link {
+		display block
+	}
 }
