@@ -997,6 +997,67 @@
 .hidden {
   display: none;
 }
+.section-gov {
+  padding: 40px 0 20px;
+  background: url("../images/bg-gov.jpg") center top/cover;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .section-gov {
+    min-height: 825px;
+    padding: 100px 0 0;
+  }
+}
+@media (min-width: 768px) {
+  .section-gov__column {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .section-gov__column {
+    width: 40%;
+  }
+}
+.section-gov__desc {
+  margin-bottom: 20px;
+  font-family: Suisse;
+  font-size: 18px;
+}
+@media (min-width: 480px) {
+  .section-gov__desc {
+    margin-bottom: 40px;
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .section-gov__desc {
+    font-size: 35px;
+  }
+}
+.section-gov__name {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+@media (min-width: 480px) {
+  .section-gov__name {
+    font-size: 22px;
+  }
+}
+@media (min-width: 992px) {
+  .section-gov__name {
+    margin-bottom: 160px;
+  }
+}
+.section-gov__more {
+  width: 18px;
+  height: auto;
+  margin-left: 5px;
+}
+@media (min-width: 992px) {
+  .section-gov__more {
+    width: 26px;
+  }
+}
 @media (min-width: 992px) {
   .visible-md {
     display: block;

@@ -351,6 +351,65 @@
 	display none
 }
 
+.section-gov {
+	padding 40px 0 20px
+	background url(../images/bg-gov.jpg) center top / cover
+	color white
+	
+	@media (min-width $sm) {
+		min-height 825px
+		padding 100px 0 0
+	}
+	
+	&__column {
+		@media (min-width $sm) {
+			width 60%
+		}
+		
+		@media (min-width $lg) {
+			width 40% 
+		}
+	}
+	
+	&__desc {
+		margin-bottom 20px
+		font-family Suisse
+		font-size 18px 
+		
+		@media (min-width $xs) {
+			margin-bottom 40px
+			font-size 25px
+		}
+
+		@media (min-width $md) {
+			font-size 35px
+		}
+	}
+	
+	&__name {
+		margin-bottom 40px
+		font-size 16px
+		
+		@media (min-width $xs) {
+			font-size 22px
+		}
+		
+		@media (min-width $md) {
+			margin-bottom 160px
+		}
+	}
+	
+	&__more {
+		width 18px 
+		height auto
+		margin-left 5px
+		
+		@media (min-width $md) {
+			width 26px
+		}
+	}
+}
+
 .visible-md {
 	@media (min-width $md) {
 		display block
