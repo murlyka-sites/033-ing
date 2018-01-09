@@ -410,6 +410,81 @@
 	}
 }
 
+.section-priory {
+	background url(../images/bg-priory.jpg) center center / cover
+}
+
+.section-priory {
+	padding 40px 0 20px
+	color white
+	
+	@media (min-width $lg) {
+		min-height 100vh
+	}
+	
+	@media (min-width $xlg) {
+		min-height 100vh 
+	}
+	
+	&__container {
+		@media (min-width $md) {
+			display flex
+		}
+	}
+	
+	&__column {
+		padding-bottom 70px 
+		
+		@media (min-width $md) {
+			width 50%
+			padding-bottom 0
+		}
+		
+		&_title {
+			padding-top 30px 
+		}
+	}
+}
+
+.card-priory {
+	padding 10px
+	background #635c4b88
+	
+	@media (min-width $xs) {
+		padding 30px 90px 30px 30px
+	}
+	
+	&__title {
+		font-family Suisse
+		font-size 20px 
+		font-weight 300
+		line-height 1.1
+		margin-bottom 15px
+		
+		@media (min-width $sm) {
+			margin-bottom 40px
+			font-size 25px
+		}
+		
+		@media (min-width $md) {
+			font-size 40px 
+		}
+		
+		@media (min-width $mlg) {
+			font-size 45px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 60px 
+		}
+	}
+	
+	&__desc {
+		
+	}
+}
+
+
 .visible-md {
 	@media (min-width $md) {
 		display block

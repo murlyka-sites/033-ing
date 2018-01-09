@@ -13,3 +13,12 @@ let vm = new Vue({
 		langSwitcherOpen: false
 	}
 });
+
+let sliderPriory = new Swiper ('.swiper-container', {
+	slidesPerView: 1,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true
+	}
+});
