@@ -31,23 +31,35 @@
   font-family: Suisse;
   border: none;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .button_size_sm {
-  padding: 15px 20px;
+  padding: 15px 20px 13px;
   font-size: 20px;
   line-height: 1.2;
   border-radius: 30px;
 }
 .button_outline {
-  border: 2px solid #fff;
+  border: 2px solid;
 }
 .button_theme_outline-white {
   color: #fff;
-  text-decoration: none;
+  border-color: #fff;
 }
 .button_theme_outline-white:hover {
   background: #fff;
   color: #635c4b;
+}
+.button_theme_outline-dark {
+  color: #635c4b;
+  border-color: #635c4b;
+}
+.button_theme_outline-dark:hover {
+  color: #fff;
+  background: #635c4b;
 }
 .button-with-icon {
   padding: 0;
@@ -234,6 +246,28 @@
 .section-main__button {
   margin-right: 15px;
 }
+.section-news {
+  padding: 40px 0 0;
+  background: #edecea;
+}
+.section-news__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.section-news__column {
+  width: 50%;
+  margin-right: 20px;
+}
+.section-news__column:last-child {
+  margin-right: 0;
+}
+.section-news__card {
+  margin-bottom: 40px;
+}
+.section-news__button {
+  margin-bottom: 45px;
+}
 .nav-top {
   font-family: Suisse;
   font-size: 20px;
@@ -270,4 +304,34 @@
 }
 .nav-social__link {
   display: block;
+}
+.card-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 165px;
+}
+.card-news__column_pr {
+  margin-right: 30px;
+}
+.card-news__column_desc {
+  padding-top: 5px;
+}
+.card-news__pr {
+  display: block;
+}
+.card-news__date {
+  display: block;
+  margin-bottom: 20px;
+  font-family: Suisse;
+  font-size: 10px;
+  color: #635c4b;
+}
+.card-news__title {
+  font-size: 25px;
+  text-decoration: none;
+  color: #635c4b;
+}
+.card-news__title:hover {
+  text-decoration: underline;
 }

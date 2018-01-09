@@ -3,10 +3,11 @@
 	font-family Suisse 
 	border none
 	text-decoration none
+	user-select none
 
 	&_size {
 		&_sm {
-			padding 15px 20px
+			padding 15px 20px 13px
 			font-size 20px 
 			line-height 1.2 
 			border-radius 30px
@@ -14,18 +15,28 @@
 	}
 	
 	&_outline {
-		border 2px solid white
+		border 2px solid
 	}
 	
 	&_theme {
 		&_outline {
 			&-white {
 				color white
-				text-decoration none
+				border-color white
 				
 				&:hover {
 					background white
-					color $color-dark 
+					color $color-dark
+				}
+			}
+			
+			&-dark {
+				color $color-dark
+				border-color $color-dark
+				
+				&:hover {
+					color white
+					background $color-dark 
 				}
 			}
 		}
