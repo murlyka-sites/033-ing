@@ -13,11 +13,11 @@ html(lang="ru")
 		#app
 			header.section.section-header: .section__container.section-header__container
 				.section-header__column.section-header__column_menu
-					button.section-header__menu.button-with-icon()
-						svg.menu.menu_cross(width="40" height="40")
+					a.section-header__menu.button-with-icon(href="#mobile-menu" data-fancybox)
+						svg.menu(width="40" height="40")
 							line.menu__bar(x1="3" y1="8" x2="37" y2="8")
-							line.menu__bar.menu__bar_cross(x1="3" y1="20" x2="37" y2="20")
-							line.menu__bar.menu__bar_cross(x1="3" y1="20" x2="37" y2="20")
+							line.menu__bar(x1="3" y1="20" x2="37" y2="20")
+							line.menu__bar(x1="3" y1="20" x2="37" y2="20")
 							line.menu__bar(x1="3" y1="32" x2="37" y2="32")
 
 				.section-header__column.section-header__column_nav
@@ -57,7 +57,29 @@ html(lang="ru")
 							.ui-lang-switcher__item(:class="{'ui-lang-switcher__item_current': lang.current == 'eng'}" @click="lang.current = 'eng'; langSwitcherOpen = false;") Eng
 							.ui-lang-switcher__item(:class="{'ui-lang-switcher__item_current': lang.current == 'rus'}" @click="lang.current = 'rus'; langSwitcherOpen = false;") Рус
 							.ui-lang-switcher__item(:class="{'ui-lang-switcher__item_current': lang.current == 'ukr'}" @click="lang.current = 'ukr'; langSwitcherOpen = false;") Укр
-					
+			.hidden
+				.popup#mobile-menu
+					header.popup__header Меню
+					.popup__body
+						nav.nav-popup
+							ul.nav-popup__list
+								li.nav-popup__item: a.nav-popup__link(href="#") О регионе
+								li.nav-popup__item: a.nav-popup__link(href="#") Новости
+								li.nav-popup__item: a.nav-popup__link(href="#") Карта
+								li.nav-popup__item: a.nav-popup__link(href="#") Преимущества
+								li.nav-popup__item: a.nav-popup__link(href="#") Проекты
+								li.nav-popup__item: a.nav-popup__link(href="#") Истории успеха
+								li.nav-popup__item: a.nav-popup__link(href="#") Контакты								
+					footer.popup__foo
+						nav.nav-social
+							ul.nav-social__list
+								li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+									path.icon-social-dark__path(d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1")
+								li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+									path.icon-social-dark__path(d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd")
+								li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+									path.icon-social-dark__path(d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff")
+
 			section.section.section-main: .section-main__container.section__container
 				h1.h1.section-main__title Новгородская 
 					br
@@ -148,6 +170,8 @@ html(lang="ru")
 							li.nav-tabs__item: a.nav-tabs__link(href="#") Область
 					img.section-invest-map__map(src="images/invest-map.png" width="725" height="688")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js")
+	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js")
 	script(src="js/main.js")
 		

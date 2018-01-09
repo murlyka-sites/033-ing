@@ -13,10 +13,3 @@ let vm = new Vue({
 		langSwitcherOpen: false
 	}
 });
-
-
-
-
-$(".menu").click(function() {
-	$(this).toggleClass("menu_cross");
-})
