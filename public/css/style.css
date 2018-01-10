@@ -158,6 +158,14 @@
 .button_outline {
   border: 2px solid;
 }
+.button_theme_white {
+  background: #fff;
+  color: #635c4b;
+}
+.button_theme_white:hover {
+  background: #635c4b;
+  color: #fff;
+}
 .button_theme_outline-white {
   color: #fff;
   border-color: #fff;
@@ -1236,6 +1244,167 @@
 @media (min-width: 1900px) {
   .card-success-story__title {
     font-size: 60px;
+  }
+}
+.section-investor-window {
+  padding: 40px 0 20px;
+  background: #8e8e8d;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .section-investor-window {
+    padding: 60px 0 40px;
+  }
+}
+@media (min-width: 1900px) {
+  .section-investor-window {
+    padding: 120px 0 60px;
+  }
+}
+.section-investor-window__title {
+  margin-bottom: 20px;
+}
+@media (min-width: 480px) {
+  .section-investor-window__title {
+    margin-bottom: 0;
+  }
+}
+.section-investor-window__header {
+  margin-bottom: 25px;
+}
+@media (min-width: 480px) {
+  .section-investor-window__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 1900px) {
+  .section-investor-window__header {
+    margin-bottom: 100px;
+  }
+}
+.list-ver-line {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+@media (min-width: 480px) {
+  .list-ver-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+}
+.list-ver-line__item {
+  border-left: 2px solid #fff;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+@media (min-width: 480px) {
+  .list-ver-line__item {
+    width: 50%;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 992px) {
+  .list-ver-line__item {
+    width: 25%;
+  }
+}
+@media (min-width: 1900px) {
+  .list-ver-line__item {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 480px) {
+  .list-ver-line__item:nth-child(2n) {
+    border-right: 2px solid #fff;
+  }
+}
+@media (min-width: 992px) {
+  .list-ver-line__item:nth-child(2n) {
+    border-right: none;
+  }
+}
+@media (min-width: 480px) {
+  .list-ver-line__item:nth-child(4n) {
+    border-right: 2px solid #fff;
+  }
+}
+@media (min-width: 480px) {
+  .card-ver-investor-window {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.card-ver-investor-window__number {
+  font-family: Suisse;
+  font-size: 20px;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .card-ver-investor-window__number {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .card-ver-investor-window__number {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1300px) {
+  .card-ver-investor-window__number {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1900px) {
+  .card-ver-investor-window__number {
+    font-size: 60px;
+  }
+}
+.card-ver-investor-window__p {
+  font-size: 14px;
+}
+@media (min-width: 480px) {
+  .card-ver-investor-window__p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .card-ver-investor-window__p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1900px) {
+  .card-ver-investor-window__p {
+    font-size: 25px;
+  }
+}
+.card-ver-investor-window__pr {
+  padding-top: 35px;
+  margin-top: auto;
+}
+@media (min-width: 1900px) {
+  .card-ver-investor-window__pr {
+    padding-top: 55px;
   }
 }
 .section-success-story {

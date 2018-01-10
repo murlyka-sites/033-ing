@@ -560,6 +560,151 @@
 	}
 }
 
+.section-investor-window {
+	padding 40px 0 20px
+	background #8e8e8d 
+	color white
+	
+	@media (min-width $md) {
+		padding 60px 0 40px
+	}
+	
+	@media (min-width $xlg) {
+		padding 120px 0 60px
+	}
+	
+	&__title {
+		margin-bottom 20px 
+		
+		@media (min-width $xs) {
+			margin-bottom 0
+		}
+	}
+
+	&__header {
+		margin-bottom 25px
+		
+		@media (min-width $xs) {
+			display flex
+			justify-content space-between
+			margin-bottom 50px
+		}
+		
+		@media (min-width $xlg) {
+			margin-bottom 100px
+		}
+	}
+	
+	&__list {
+		
+	}
+}
+
+.list-ver-line {
+	padding 0
+	list-style-type none
+	margin 0
+	
+	@media (min-width $xs) {
+		display flex
+		flex-wrap wrap
+		align-items stretch
+	}
+	
+	&__item {
+		border-left 2px solid white 
+		flex none
+		
+		padding 0 10px 
+		margin-bottom 20px 
+		
+		@media (min-width $xs) {
+			width 50%
+			padding 0 15px
+		}
+		
+		@media (min-width $md) {
+			width 25%
+		}
+		
+		@media (min-width $xlg) {
+			padding 0 30px 
+		}
+		
+		&:nth-child(2n) {
+			@media (min-width $xs) {
+				border-right 2px solid white 
+			}
+			
+			@media (min-width $md) {
+				border-right none
+			}
+		}
+
+
+		&:nth-child(4n) {
+			
+			@media (min-width $xs) {
+				border-right 2px solid white
+			}
+		}
+	}
+}
+
+.card-ver-investor-window {
+	@media (min-width $xs) {
+		display flex
+		flex-direction column
+	}
+
+	&__number {
+		font-family Suisse 
+		font-size 20px
+		line-height 1.1
+		
+		@media (min-width $sm) {
+			font-size 25px
+		}
+		
+		@media (min-width $md) {
+			font-size 40px 
+		}
+		
+		@media (min-width $mlg) {
+			font-size 45px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 60px 
+		}
+	}
+	
+	&__p {
+		font-size 14px 
+		
+		@media (min-width $xs) {
+			font-size 16px 
+		}
+		
+		@media (min-width $lg) {
+			font-size 20px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 25px 
+		}
+	}
+	
+	&__pr {
+		padding-top 35px 
+		margin-top auto
+		
+		@media (min-width $xlg) {
+			padding-top 55px 
+		}
+	}
+}
+
 .section-success-story {
 	padding 40px 0 20px
 	color white
