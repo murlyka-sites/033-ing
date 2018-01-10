@@ -899,11 +899,12 @@
 }
 .nav-social__icon {
   width: 49px;
-  height: auto;
+  height: 49px;
 }
 @media (min-width: 1900px) {
   .nav-social__icon {
     width: 60px;
+    height: 60px;
   }
 }
 .card-news {
