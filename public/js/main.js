@@ -43,18 +43,7 @@ let sliderSuccessStory = new Swiper ('.swiper-container[data-slider="story"]', {
 		crossFade: true
 	}
 });
-/*
-$(document).load( function () {
-	
-})*/
-setTimeout(function () {
-	// $(".section-main__bg").animate({width: "150%", height: "150%"}, 10000)
-	
 
-	/*@cc_on @if (@_jscript)
-		$(".section-main__bg").animate({width: "150%", height: "150%"}, 10000)
-	@else @*/
-		vm.$data.load = true
-	/*@end @*/
-}, 2000)
+
+
 

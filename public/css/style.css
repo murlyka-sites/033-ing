@@ -127,9 +127,6 @@
 .list-line__item:last-child {
   border-bottom: 2px solid #fff;
 }
-[v-cloak] {
-  display: none;
-}
 .button {
   display: inline-block;
   font-family: Suisse;
@@ -1362,12 +1359,19 @@
   }
 }
 .section-investor-window__close {
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
+  right: 0;
   top: 0;
-  left: 100%;
   background: rgba(0,0,0,0.35);
   cursor: pointer;
+}
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .section-investor-window__close {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 100%;
+    right: auto;
+  }
 }
 .section-investor-window__close:hover {
   background: rgba(0,0,0,0.6);
@@ -1551,5 +1555,8 @@
   }
 }
 .hidden {
+  display: none;
+}
+[v-cloak] {
   display: none;
 }

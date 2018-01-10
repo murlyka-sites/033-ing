@@ -605,11 +605,18 @@
 	}
 	
 	&__close {
-		position sticky
+		position absolute
+		right 0
 		top 0
-		left 100%
+		
 		background rgba(0, 0, 0, .35)
-		cursor pointer 
+		cursor pointer
+		
+		@supports (position sticky) {
+			position sticky
+			left 100%
+			right auto
+		}
 		
 		&:hover {
 			background rgba(0, 0, 0, .6)
@@ -783,5 +790,9 @@
 
 
 .hidden {
+	display none
+}
+
+[v-cloak] {
 	display none
 }
