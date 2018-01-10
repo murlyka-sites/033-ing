@@ -127,6 +127,9 @@
 .list-line__item:last-child {
   border-bottom: 2px solid #fff;
 }
+[v-cloak] {
+  display: none;
+}
 .button {
   display: inline-block;
   font-family: Suisse;
@@ -290,6 +293,7 @@
   height: 45px;
   padding: 0 25px;
   border-radius: 25px;
+  cursor: pointer;
 }
 .ui-lang-switcher__item:hover {
   background: #fff;
@@ -530,9 +534,37 @@
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 150px 0 55px;
-  background: url("../images/bg-main.jpg") center center/cover;
   color: #fff;
   text-align: center;
+}
+.section-main-- {
+  position: relative;
+  overflow: hidden;
+}
+.section-main__backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: 10s all;
+  -o-transition: 10s all;
+  transition: 10s all;
+}
+.section-main__bg {
+  width: 100%;
+  height: 100%;
+  background: url("../images/xs-bg-main.jpg") center/cover no-repeat;
+}
+@media (min-width: 1200px) {
+  .section-main__bg {
+    background: url("../images/bg-main.jpg") center/cover no-repeat;
+  }
+}
+.section-main__bg.animation {
+  -webkit-animation: bg-scale 10s;
+  animation: bg-scale 10s;
 }
 @media (min-width: 768px) {
   .section-main {
@@ -692,6 +724,46 @@
   width: 100%;
   height: auto;
   max-width: 850px;
+}
+@-moz-keyframes bg-scale {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 120%;
+    height: 120%;
+  }
+}
+@-webkit-keyframes bg-scale {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 120%;
+    height: 120%;
+  }
+}
+@-o-keyframes bg-scale {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 120%;
+    height: 120%;
+  }
+}
+@keyframes bg-scale {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 120%;
+    height: 120%;
+  }
 }
 * {
   -webkit-box-sizing: border-box;

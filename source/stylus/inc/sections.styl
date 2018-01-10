@@ -119,13 +119,56 @@
 	}
 }
 
+@keyframes bg-scale {
+	from {
+		width 100%
+		height 100%
+	}
+	
+	to {
+		width 120%
+		height 120%
+	}
+}
+
 .section-main {
 	display flex
 	flex-direction column
 	padding 150px 0 55px
-	background url(../images/bg-main.jpg) center center / cover
 	color white
 	text-align center
+	
+	&-- {
+		position relative
+		overflow hidden
+	}
+	
+	&__backdrop {
+		position absolute
+		width 100%
+		height 100%
+		left 0
+		bottom 0 
+		z-index -1
+		transition 10s all
+		
+	}
+	
+	&__bg {	
+		// position absolute	
+		width 100%
+		height 100%
+		background url(../images/xs-bg-main.jpg) center / cover no-repeat
+		
+		@media (min-width $lg) {
+			background url(../images/bg-main.jpg) center / cover no-repeat
+		}
+		
+		&.animation {
+			animation bg-scale 10s
+		}
+	}
+	
 	
 	@media (min-width $sm) {
 		min-height 100vh 

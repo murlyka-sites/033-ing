@@ -64,8 +64,8 @@
             </div>
           </div>
           <div class="section-header__column section-header__column_lang">
-            <div class="ui-lang-switcher" :class="{'ui-lang-switcher_open': langSwitcherOpen }">
-              <div class="ui-lang-switcher__current" @click="langSwitcherOpen = !langSwitcherOpen">{{ lang.labels[ lang.current ]}}
+            <div class="ui-lang-switcher" :class="{'ui-lang-switcher_open': langSwitcherOpen }" v-cloak>
+              <div class="ui-lang-switcher__current" @click="langSwitcherOpen = !langSwitcherOpen">{{ lang.current }}
                 <button class="ui-lang-switcher__corner button-with-icon">
                   <svg class="button-with-icon__svg" width="13" height="8">
                     <path d="M 1 1 7 7 13 1" stroke="white" stroke-width="2" fill="none"></path>
@@ -73,9 +73,8 @@
                 </button>
               </div>
               <div class="ui-lang-switcher__list" :class="{'hidden': !langSwitcherOpen }">
-                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'eng'}" @click="lang.current = 'eng'; langSwitcherOpen = false;">Eng</div>
-                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'rus'}" @click="lang.current = 'rus'; langSwitcherOpen = false;">Рус</div>
-                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'ukr'}" @click="lang.current = 'ukr'; langSwitcherOpen = false;">Укр</div>
+                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'Eng'}" @click="lang.current = 'eng'; langSwitcherOpen = false;">Eng</div>
+                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'Рус'}" @click="lang.current = 'rus'; langSwitcherOpen = false;">Рус</div>
               </div>
             </div>
           </div>
@@ -117,33 +116,38 @@
           </footer>
         </div>
       </div>
-      <section class="section section-main">
-        <div class="section-main__container section__container">
-          <h1 class="h1 section-main__title">Новгородская <br>область —<br>регион развития</h1>
-          <p class="section-main__slogan h2">14,84 млрд. руб. <br>будет инвестировано <br>в 2018 году</p>
-          <footer class="section-main__foo">
-            <div class="section-main__buttons"><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Прямая линия с губернатором</a><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Получить поддержку</a></div>
-            <div class="section-main__social">
-              <nav class="nav-social">
-                <ul class="nav-social__list">
-                  <li class="nav-social__item"><a class="nav-social__link" href="#">
-                      <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
-                        <path class="icon-social__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
-                      </svg></a></li>
-                  <li class="nav-social__item"><a class="nav-social__link" href="#">
-                      <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
-                        <path class="icon-social__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
-                      </svg></a></li>
-                  <li class="nav-social__item"><a class="nav-social__link" href="#">
-                      <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
-                        <path class="icon-social__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
-                      </svg></a></li>
-                </ul>
-              </nav>
-            </div>
-          </footer>
+      <div class="section-main--">
+        <div class="section-main__backdrop">
+          <div class="section-main__bg" :class="{animation: load}"></div>
         </div>
-      </section>
+        <section class="section section-main">
+          <div class="section-main__container section__container">
+            <h1 class="h1 section-main__title">Новгородская <br>область —<br>регион развития</h1>
+            <p class="section-main__slogan h2">14,84 млрд. руб. <br>будет инвестировано <br>в 2018 году</p>
+            <footer class="section-main__foo">
+              <div class="section-main__buttons"><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Прямая линия с губернатором</a><a class="section-main__button button button_outline button_size_sm button_theme_outline-white" href="#">Получить поддержку</a></div>
+              <div class="section-main__social">
+                <nav class="nav-social">
+                  <ul class="nav-social__list">
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
+                        </svg></a></li>
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
+                        </svg></a></li>
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
+                        </svg></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </div>
       <section class="section section-news">
         <div class="section__container section-news__container">
           <div class="section-news__column"><a class="button button_size_sm button_outline button_theme_outline-dark section-news__button" href="#">АНОНСЫ СОБЫТИЙ</a>
@@ -279,7 +283,7 @@
       <section class="section section-gov">
         <div class="section__container section-edge__container">
           <div class="section-gov__column">
-            <div class="section-gov__desc">Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведения бизнеса <img class="section-gov__more" src="images/imore.svg" width="26" height="26"></div>
+            <div class="section-gov__desc">Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведения бизнеса <a href="#"><img class="section-gov__more" src="images/imore.svg" width="26" height="26"></a></div>
             <div class="section-gov__name">Губрнатор Новгородской области<br>Андрей Сергеевич Никитин</div><a class="button button_size_sm button_theme_outline-white button_outline section-gov__button" href="#">Прямая линия с губернатором</a>
           </div>
         </div>
@@ -298,7 +302,7 @@
                     <div class="card-priory__desc">
                       <p class="p">Строительство лечебно-реабилитационного центра межрегионального  значения на 300 койкомест.</p>
                       <p class="p">Разработана проектно-сметная документация, имеется положительное  заключение государственной экспертизы, имеется санитарно-эпидемиологическая экспертиза проектной документации.</p>
-                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><img class="card-priory__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><a href="#"><img class="card-priory__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -317,7 +321,7 @@
                     <div class="card-priory__desc">
                       <p class="p">Строительство лечебно-реабилитационного центра межрегионального  значения на 300 койкомест.</p>
                       <p class="p">Разработана проектно-сметная документация, имеется положительное  заключение государственной экспертизы, имеется санитарно-эпидемиологическая экспертиза проектной документации.</p>
-                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><img class="card-priory__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><a href="#"><img class="card-priory__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -336,7 +340,7 @@
                     <div class="card-priory__desc">
                       <p class="p">Строительство лечебно-реабилитационного центра межрегионального  значения на 300 койкомест.</p>
                       <p class="p">Разработана проектно-сметная документация, имеется положительное  заключение государственной экспертизы, имеется санитарно-эпидемиологическая экспертиза проектной документации.</p>
-                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><img class="card-priory__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><a href="#"><img class="card-priory__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -355,7 +359,7 @@
                     <div class="card-priory__desc">
                       <p class="p">Строительство лечебно-реабилитационного центра межрегионального  значения на 300 койкомест.</p>
                       <p class="p">Разработана проектно-сметная документация, имеется положительное  заключение государственной экспертизы, имеется санитарно-эпидемиологическая экспертиза проектной документации.</p>
-                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><img class="card-priory__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.</p><a href="#"><img class="card-priory__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -479,7 +483,7 @@
                       </div>
                     </header>
                     <div class="card-success-story__desc">
-                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><img class="card-success-story__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><a href="#"><img class="card-success-story__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -502,7 +506,7 @@
                       </div>
                     </header>
                     <div class="card-success-story__desc">
-                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><img class="card-success-story__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><a href="#"><img class="card-success-story__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -525,7 +529,7 @@
                       </div>
                     </header>
                     <div class="card-success-story__desc">
-                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><img class="card-success-story__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><a href="#"><img class="card-success-story__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -548,7 +552,7 @@
                       </div>
                     </header>
                     <div class="card-success-story__desc">
-                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><img class="card-success-story__more" src="images/imore.svg" width="26" height="26">
+                      <p class="p">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. <br>С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.</p><a href="#"><img class="card-success-story__more" src="images/imore.svg" width="26" height="26"></a>
                     </div>
                   </div>
                 </div>
@@ -565,6 +569,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="js/main.js"></script>
   </body>
 </html>
