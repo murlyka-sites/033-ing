@@ -1090,9 +1090,6 @@
   }
 }
 .section-priory {
-  background: url("../images/bg-priory.jpg") center center/cover;
-}
-.section-priory {
   padding: 40px 0 20px;
   color: #fff;
 }
@@ -1119,7 +1116,6 @@
 @media (min-width: 992px) {
   .section-priory__column {
     width: 50%;
-    padding-bottom: 0;
   }
 }
 .section-priory__column_title {
@@ -1161,6 +1157,114 @@
   .card-priory__title {
     font-size: 60px;
   }
+}
+.card-success-story {
+  padding: 10px;
+  background: rgba(99,92,75,0.533);
+}
+@media (min-width: 480px) {
+  .card-success-story {
+    padding: 30px;
+  }
+}
+.card-success-story__header {
+  text-align: center;
+  margin-bottom: 5px;
+}
+@media (min-width: 480px) {
+  .card-success-story__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+}
+@media (min-width: 480px) {
+  .card-success-story__column_pr {
+    margin-right: 15px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+@media (min-width: 1300px) {
+  .card-success-story__column_pr {
+    margin-right: 60px;
+  }
+}
+.card-success-story__pr {
+  border-radius: 50%;
+  width: 120px;
+  height: auto;
+}
+@media (min-width: 1300px) {
+  .card-success-story__pr {
+    width: 180px;
+  }
+}
+.card-success-story__title {
+  font-family: Suisse;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+@media (min-width: 480px) {
+  .card-success-story__title {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .card-success-story__title {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .card-success-story__title {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1300px) {
+  .card-success-story__title {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1900px) {
+  .card-success-story__title {
+    font-size: 60px;
+  }
+}
+.section-success-story {
+  padding: 40px 0 20px;
+  color: #fff;
+}
+@media (min-width: 1200px) {
+  .section-success-story {
+    min-height: 100vh;
+  }
+}
+@media (min-width: 992px) {
+  .section-success-story__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.section-success-story__column {
+  padding-bottom: 70px;
+}
+@media (min-width: 992px) {
+  .section-success-story__column {
+    width: 50%;
+    padding-bottom: 0;
+  }
+}
+.section-success-story__column_title {
+  padding-top: 30px;
 }
 @media (min-width: 992px) {
   .visible-md {

@@ -411,10 +411,6 @@
 }
 
 .section-priory {
-	background url(../images/bg-priory.jpg) center center / cover
-}
-
-.section-priory {
 	padding 40px 0 20px
 	color white
 	
@@ -437,7 +433,6 @@
 		
 		@media (min-width $md) {
 			width 50%
-			padding-bottom 0
 		}
 		
 		&_title {
@@ -484,6 +479,114 @@
 	}
 }
 
+.card-success-story {
+	padding 10px
+	background #635c4b88
+	
+	@media (min-width $xs) {
+		padding 30px
+	}
+	
+	&__header {
+		text-align center
+		margin-bottom 5px
+		
+		@media (min-width $xs) {
+			display flex
+			align-items center	
+			margin-bottom 30px
+			text-align left
+		}
+	}
+	
+	&__column {
+		&_pr {
+			@media (min-width $xs) {
+				margin-right 15px
+				flex none
+			}
+			
+			@media (min-width $mlg) {
+				margin-right 60px
+			}
+		}
+	}
+	
+	&__pr {
+		border-radius 50%
+		width 120px 
+		height auto
+		
+		@media (min-width $xs) {
+			
+		}
+		
+
+		@media (min-width $mlg) {
+			width 180px
+		}
+	}
+	
+	&__title {
+		font-family Suisse
+		font-size 20px 
+		font-weight 300
+		line-height 1.1
+		margin-bottom 5px
+		
+		@media (min-width $xs) {
+			margin-bottom 15px
+		}
+		
+		@media (min-width $sm) {
+			font-size 25px
+		}
+		
+		@media (min-width $md) {
+			font-size 40px 
+		}
+		
+		@media (min-width $mlg) {
+			font-size 45px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 60px 
+		}
+	}
+	
+	&__desc {
+		
+	}
+}
+
+.section-success-story {
+	padding 40px 0 20px
+	color white
+	
+	@media (min-width $lg) {
+		min-height 100vh
+	}
+	
+	&__container {
+		@media (min-width $md) {
+			display flex
+		}
+	}
+	
+	&__column {
+		padding-bottom 70px 
+		
+		@media (min-width $md) {
+			width 50%
+			padding-bottom 0
+		}
+		
+		&_title {
+			padding-top 30px 
+		}
+	}
+}
 
 .visible-md {
 	@media (min-width $md) {

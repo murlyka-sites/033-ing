@@ -14,11 +14,20 @@ let vm = new Vue({
 	}
 });
 
-let sliderPriory = new Swiper ('.swiper-container', {
+let sliderPriory = new Swiper ('.swiper-container[data-slider="priory"]', {
 	slidesPerView: 1,
 	loop: true,
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.swiper-pagination[data-pagination="priory"]',
+		clickable: true
+	}
+});
+
+let sliderSuccessStory = new Swiper ('.swiper-container[data-slider="story"]', {
+	slidesPerView: 1,
+	loop: true,
+	pagination: {
+		el: '.swiper-pagination[data-pagination="story"]',
 		clickable: true
 	}
 });
