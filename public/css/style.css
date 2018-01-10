@@ -1033,9 +1033,6 @@
     font-size: 22px;
   }
 }
-.hidden {
-  display: none;
-}
 .section-gov {
   padding: 40px 0 20px;
   background: url("../images/bg-gov.jpg") center top/cover;
@@ -1247,17 +1244,20 @@
   }
 }
 .section-investor-window {
-  padding: 40px 0 20px;
+  position: relative;
   background: #8e8e8d;
   color: #fff;
 }
+.section-investor-window__inner {
+  padding: 40px 0 20px;
+}
 @media (min-width: 992px) {
-  .section-investor-window {
-    padding: 60px 0 40px;
+  .section-investor-window__inner {
+    padding: 100px 0 40px;
   }
 }
 @media (min-width: 1900px) {
-  .section-investor-window {
+  .section-investor-window__inner {
     padding: 120px 0 60px;
   }
 }
@@ -1288,6 +1288,17 @@
     margin-bottom: 100px;
   }
 }
+.section-investor-window__close {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 100%;
+  background: rgba(0,0,0,0.35);
+  cursor: pointer;
+}
+.section-investor-window__close:hover {
+  background: rgba(0,0,0,0.6);
+}
 .list-ver-line {
   padding: 0;
   list-style-type: none;
@@ -1312,6 +1323,7 @@
   flex: none;
   padding: 0 10px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 @media (min-width: 480px) {
   .list-ver-line__item {
@@ -1342,6 +1354,31 @@
 @media (min-width: 480px) {
   .list-ver-line__item:nth-child(4n) {
     border-right: 2px solid #fff;
+  }
+}
+.card-investor-window__number {
+  font-family: Suisse;
+  font-size: 20px;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .card-investor-window__number {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .card-investor-window__number {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1300px) {
+  .card-investor-window__number {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1900px) {
+  .card-investor-window__number {
+    font-size: 60px;
   }
 }
 @media (min-width: 480px) {
@@ -1439,4 +1476,7 @@
   .visible-md {
     display: block;
   }
+}
+.hidden {
+  display: none;
 }

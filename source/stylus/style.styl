@@ -347,9 +347,6 @@
 }
 
 
-.hidden {
-	display none
-}
 
 .section-gov {
 	padding 40px 0 20px
@@ -561,16 +558,23 @@
 }
 
 .section-investor-window {
-	padding 40px 0 20px
+	position relative
+	
 	background #8e8e8d 
 	color white
 	
-	@media (min-width $md) {
-		padding 60px 0 40px
-	}
 	
-	@media (min-width $xlg) {
-		padding 120px 0 60px
+	
+	&__inner {
+		padding 40px 0 20px
+		
+		@media (min-width $md) {
+			padding 100px 0 40px
+		}
+		
+		@media (min-width $xlg) {
+			padding 120px 0 60px
+		}
 	}
 	
 	&__title {
@@ -598,6 +602,18 @@
 	&__list {
 		
 	}
+	
+	&__close {
+		position sticky
+		top 0
+		left 100%
+		background rgba(0, 0, 0, .35)
+		cursor pointer 
+		
+		&:hover {
+			background rgba(0, 0, 0, .6)
+		}
+	}
 }
 
 .list-ver-line {
@@ -617,6 +633,7 @@
 		
 		padding 0 10px 
 		margin-bottom 20px 
+		cursor pointer
 		
 		@media (min-width $xs) {
 			width 50%
@@ -647,6 +664,30 @@
 			@media (min-width $xs) {
 				border-right 2px solid white
 			}
+		}
+	}
+}
+
+.card-investor-window {
+	&__number {
+		font-family Suisse 
+		font-size 20px
+		line-height 1.1
+		
+		@media (min-width $sm) {
+			font-size 25px
+		}
+		
+		@media (min-width $md) {
+			font-size 40px 
+		}
+		
+		@media (min-width $mlg) {
+			font-size 45px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 60px 
 		}
 	}
 }
@@ -737,4 +778,9 @@
 	@media (min-width $md) {
 		display block
 	}
+}
+
+
+.hidden {
+	display none
 }

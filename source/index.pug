@@ -260,8 +260,8 @@ html(lang="ru")
 					a.button.button_size_sm.button_theme_outline-white.button_outline.section-gov__button(href="#") Прямая линия с губернатором
 			.swiper-container(data-slider="priory")
 				.swiper-wrapper
-					each i in [1,2,3,4]
-						.swiper-slide: section.section.section-priory(style="background: url(images/bg-priory.jpg) center / cover"): .section__container.section-priory__container
+					each i in ["priory", "success-story","priory", "success-story"]
+						.swiper-slide: section.section.section-priory(style="background: url(images/bg-" + i + ".jpg) center / cover"): .section__container.section-priory__container
 							.section-priory__column.section-priory__column_title
 								h2.h2.section-priory__title Приоритетный
 									br
@@ -277,42 +277,61 @@ html(lang="ru")
 										p.p Стоимость проекта — 2955,6 млн. рублей, Из внебюджетных источников — 2000,0 млн. рублей.
 										img.card-priory__more(src="images/imore.svg" width="26" height="26")
 				.swiper-pagination(data-pagination="priory")
-			section.section.section-investor-window: .section__container.section-investor-window__container
-				.section-investor-window__header 
-					.section-investor-window__side.section-investor-window__side_title
-						h2.h2.section-investor-window__title Одно окно
-							br
-							| для инвестора
-					.section-investor-window__side.section-investor-window__side_button
-						a.section-investor-window__button.button.button_theme_white.button_size_sm(href="#") Подать заявку
-				ul.section-investro-window__list.list-ver-line
-					li.list-ver-line__item.card-ver-investor-window
-						.card-ver-investor-window__number 1
-						.card-ver-investor-window__desc
-							p.p.card-ver-investor-window__p Обращение инвестора в Агентство развития Новгородской области.
-							p.p.card-ver-investor-window__p Подготовка информации и инвестиционного намерения подписание соглашения о сопровождении проекта, внесение проекта в реестр проектов
-							.card-ver-investor-window__pr: img(src="images/investor-window/1.svg" width="95" height="80")
-					li.list-ver-line__item.card-ver-investor-window
-						.card-ver-investor-window__number 2
-						.card-ver-investor-window__desc
-							p.p.card-ver-investor-window__p Формирование рабочей группы составление дорожной карты и паспорта проекта
-						.card-ver-investor-window__pr: img(src="images/investor-window/2.svg" width="59" height="90")
-					li.list-ver-line__item.card-ver-investor-window
-						.card-ver-investor-window__number 3
-						.card-ver-investor-window__desc
-							p.p.card-ver-investor-window__p Первое совещание рабочей группы
-							p.p.card-ver-investor-window__p Сопровождение проекта
-							p.p.card-ver-investor-window__p Мониторинг дорожной карты проекта
-						.card-ver-investor-window__pr: img(src="images/investor-window/3.svg" width="83" height="54")
-					li.list-ver-line__item.card-ver-investor-window
-						.card-ver-investor-window__number 4
-						.card-ver-investor-window__desc
-							p.p.card-ver-investor-window__p Совещание рабочей группы в случае нарушения сроков дорожной карты или возникновения иных проблем
-						.card-ver-investor-window__pr: img(src="images/investor-window/4.svg" width="58" height="91")
+			section.section.section-investor-window
+				button.button-with-icon.section-investor-window__close(:class="{hidden: investorOpen == 0}" @click="investorOpen = 0"): svg(width="80" height="80" viewBox="0 0 80 80")
+						path(d="M 21 21 59 59 M 59 21 21 59" stroke="white" stroke-width="1")
+				.section.section-investor-window__inner: .section__container.section-investor-window__container
+					.section-investor-window__header 
+						.section-investor-window__side.section-investor-window__side_title
+							h2.h2.section-investor-window__title Одно окно
+								br
+								| для инвестора
+						.section-investor-window__side.section-investor-window__side_button
+							a.section-investor-window__button.button.button_theme_white.button_size_sm(href="#") Подать заявку
+					ul.section-investor-window__list.list-ver-line(:class="{hidden: investorOpen != 0}")
+						li.list-ver-line__item.card-ver-investor-window(@click="investorOpen = 1")
+							.card-ver-investor-window__number 1
+							.card-ver-investor-window__desc
+								p.p.card-ver-investor-window__p Обращение инвестора в Агентство развития Новгородской области.
+								p.p.card-ver-investor-window__p Подготовка информации и инвестиционного намерения подписание соглашения о сопровождении проекта, внесение проекта в реестр проектов
+								.card-ver-investor-window__pr: img(src="images/investor-window/1.svg" width="95" height="80")
+						li.list-ver-line__item.card-ver-investor-window(@click="investorOpen = 2")
+							.card-ver-investor-window__number 2
+							.card-ver-investor-window__desc
+								p.p.card-ver-investor-window__p Формирование рабочей группы составление дорожной карты и паспорта проекта
+							.card-ver-investor-window__pr: img(src="images/investor-window/2.svg" width="59" height="90")
+						li.list-ver-line__item.card-ver-investor-window(@click="investorOpen = 3")
+							.card-ver-investor-window__number 3
+							.card-ver-investor-window__desc
+								p.p.card-ver-investor-window__p Первое совещание рабочей группы
+								p.p.card-ver-investor-window__p Сопровождение проекта
+								p.p.card-ver-investor-window__p Мониторинг дорожной карты проекта
+							.card-ver-investor-window__pr: img(src="images/investor-window/3.svg" width="83" height="54")
+						li.list-ver-line__item.card-ver-investor-window(@click="investorOpen = 4")
+							.card-ver-investor-window__number 4
+							.card-ver-investor-window__desc
+								p.p.card-ver-investor-window__p Совещание рабочей группы в случае нарушения сроков дорожной карты или возникновения иных проблем
+							.card-ver-investor-window__pr: img(src="images/investor-window/4.svg" width="58" height="91")
+					.section-investor-window__body
+						each i in [1,2,3,4]
+							.card-investor-window(:class="{hidden: investorOpen !="+ i +"}")
+								.card-investor-window__number #{i}
+								.card-investor-window__desc
+									p.p Проведем исследование рынка на предмет реализации
+										br
+										| Вашего делового потенциала как инвестора.
+									p.p Предоставим Вам Информацию:
+										br
+										| об инфраструктурном и сырьевом потенциале Республики Татарстан, основных отраслях промышленности; о мерах государственной поддержки предпринимательства; о налоговоых преференциях на территории республики.
+									p.p Поможем в выборе оптимальной стратегии для выхода на рынок Республики Татарстан.
+									p.p Окажем содействие в поиске и подборе серья, необходимого для производства конечного продукта.
+									p.p Подберем для Вас производителей и поставщиков услуг, необходимых для реализации бизнес-проекта.
+									p.p Поможем организовать переговоры с ведомствами и государственными структурами по вопросам подготовки необходимой документально-правовой базы проекта.
+
 			.swiper-container(data-slider="story")
 				.swiper-wrapper
-					each i in [1,2,3,4]
-						.swiper-slide: section.section.section-success-story(style="background: url(images/bg-success-story.jpg) center / cover"): .section__container.section-success-story__container
+					each i in ["priory", "success-story","priory", "success-story"]
+						.swiper-slide: section.section.section-success-story(style="background: url(images/bg-" + i + ".jpg) center / cover"): .section__container.section-success-story__container
 							.section-success-story__column.section-success-story__column_title
 								h2.h2.section-priory__title История успеха
 							.section-success-story__column.section-success-story__column_desc
@@ -331,11 +350,11 @@ html(lang="ru")
 											| С другой стороны, место должно находиться в пределах разумной логистики и иметь транспортную инфраструктуру. Так мы и вышли на сайт Батецкого муниципального района, предлагавшего различные инвестиционные площадки.
 										img.card-success-story__more(src="images/imore.svg" width="26" height="26")
 				.swiper-pagination(data-pagination="story")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js")
-	link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css")
-	script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js")
-	script(src="js/main.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js")
+		link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js")
+		script(src="js/main.js")
 		
