@@ -121,17 +121,20 @@
 
 @keyframes bg-scale {
 	from {
-		width 100%
-		height 100%
+		transform scale(1)
+		// width 100%
+		// height 100%
 	}
 	
 	to {
-		width 120%
-		height 120%
+		transform scale(1.5)
+		// width 120%
+		// height 120%
 	}
 }
 
 .section-main {
+	
 	display flex
 	flex-direction column
 	padding 150px 0 55px
@@ -139,6 +142,7 @@
 	text-align center
 	
 	&-- {
+		transform: translate3d(0%,0,0);
 		position relative
 		overflow hidden
 	}
@@ -150,7 +154,6 @@
 		left 0
 		bottom 0 
 		z-index -1
-		transition 10s all
 		
 	}
 	
@@ -165,7 +168,7 @@
 		}
 		
 		&.animation {
-			animation bg-scale 10s
+			animation bg-scale 15s forwards
 		}
 	}
 	

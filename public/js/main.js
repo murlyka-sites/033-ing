@@ -44,6 +44,8 @@ let sliderSuccessStory = new Swiper ('.swiper-container[data-slider="story"]', {
 	}
 });
 
-
+window.onload = function () {
+	document.querySelector('.section-main__bg').classList.add('animation')
+}
 
 
