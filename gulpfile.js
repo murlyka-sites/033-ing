@@ -87,7 +87,7 @@ function taskImagemin() {
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.jpegtran({progressive: true}),
 			imagemin.mozjpeg({progressive: true}),
-			imagemin.optipng({optimizationLevel: 7}),
+			imagemin.optipng({optimizationLevel: 6}),
 			imagemin.pngquant({quality: '85-100'}),
 			imagemin.svgo()
 		]))

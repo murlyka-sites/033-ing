@@ -118,6 +118,7 @@
 .list-line__item {
   padding: 15px 15px 15px 0;
   border-top: 2px solid #fff;
+  cursor: pointer;
 }
 @media (min-width: 1200px) {
   .list-line__item {
@@ -318,6 +319,7 @@
 .nav-tabs__item {
   padding: 10px;
   border-right: 2px solid #fff;
+  cursor: pointer;
 }
 @media (min-width: 1900px) {
   .nav-tabs__item {

@@ -158,18 +158,54 @@ html(lang="ru")
 				.section-invest-map__column.section-invest-map__column_desc
 					h2.h2.section-invest-map__title Инвестиционная карта
 					ul.section-invest-map__desc.list-line
-						li.list-line__item 30 млн. человек в радиусе 500 км.
-						li.list-line__item Федеральная трасса М10 (Москва-Санкт-Петербург) и скоростная трасса М11.
-						li.list-line__item 1 час до Санкт-Петербурга.
-						li.list-line__item 3 часа до Москвы.
-						li.list-line__item 200 км до аэропорта Пулково и порта на Балтийском море.
-						li.list-line__item Выход на рынки Белоруссии, Восточной и Западной Европы.
+						li.list-line__item(@click="mapLayer = 1") 30 млн. человек в радиусе 500 км.
+						li.list-line__item(@click="mapLayer = 2") Федеральная трасса М10 (Москва-Санкт-Петербург) и скоростная трасса М11.
+						li.list-line__item(@click="mapLayer = 3") 1 час до Санкт-Петербурга.
+						li.list-line__item(@click="mapLayer = 4") 3 часа до Москвы.
+						li.list-line__item(@click="mapLayer = 5") 200 км до аэропорта Пулково и порта на Балтийском море.
+						li.list-line__item(@click="mapLayer = 6") Выход на рынки Белоруссии, Восточной и Западной Европы.
 				.section-invest-map__column.section-invest-map__column_map
 					nav.section-invest-map__tabs.nav-tabs
 						ul.nav-tabs__list
-							li.nav-tabs__item.nav-tabs__item_active: a.nav-tabs__link.nav-tabs__link_active(href="#") Россия
-							li.nav-tabs__item: a.nav-tabs__link(href="#") Область
-					img.section-invest-map__map(src="images/invest-map.png" width="725" height="688")
+							li.nav-tabs__item(:class="{ 'nav-tabs__item_active': mapsTab == 1}" @click="mapsTab = 1; mapLayer = 1;") Россия
+							li.nav-tabs__item(:class="{'nav-tabs__item_active': mapsTab == 2}"  @click="mapsTab = 2; mapLayer = 1;") Область
+					
+					svg.section-invest-map__map(:class="{hidden: mapsTab != 1}" viewBox="0 0 1200 1200" width="1200" height="1200")
+						def
+							clipPath#circle-map
+								circle(cx="600" cy="600" r="500")
+						image(xlink:href="images/maps.jpg" width="1000" height="1000" x="100" y="100" clip-path="url(#circle-map)")
+						g(:class="{hidden: mapLayer != 1}")
+							text(x="500" y="500" font-size="100") Россия 1
+						g(:class="{hidden: mapLayer != 2}")
+							text(x="500" y="500" font-size="100") Россия 2
+						g(:class="{hidden: mapLayer != 3}")
+							text(x="500" y="500" font-size="100") Россия 3
+						g(:class="{hidden: mapLayer != 4}")
+							text(x="500" y="500" font-size="100") Россия 4
+						g(:class="{hidden: mapLayer != 5}")
+							text(x="500" y="500" font-size="100") Россия 5
+						g(:class="{hidden: mapLayer != 6}")
+							text(x="500" y="500" font-size="100") Россия 6
+
+					svg.section-invest-map__map(:class="{hidden: mapsTab != 2}" viewBox="0 0 1200 1200" width="1200" height="1200")
+						def
+							clipPath#circle-map-2
+								circle(cx="600" cy="600" r="500")
+						image(xlink:href="images/maps.jpg" width="1000" height="1000" x="100" y="100" clip-path="url(#circle-map-2)")
+						g(:class="{hidden: mapLayer != 1}")
+							text(x="500" y="500" font-size="100") Область 1
+						g(:class="{hidden: mapLayer != 2}")
+							text(x="500" y="500" font-size="100") Область 2
+						g(:class="{hidden: mapLayer != 3}")
+							text(x="500" y="500" font-size="100") Область 3
+						g(:class="{hidden: mapLayer != 4}")
+							text(x="500" y="500" font-size="100") Область 4
+						g(:class="{hidden: mapLayer != 5}")
+							text(x="500" y="500" font-size="100") Область 5
+						g(:class="{hidden: mapLayer != 6}")
+							text(x="500" y="500" font-size="100") Область 6
+
 			section.section.section-edge: .section__container.section-edge__container
 				h2.h2.section-edge__title Преимущества 
 					br.hidden.visible-md

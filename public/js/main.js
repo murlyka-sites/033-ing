@@ -8,7 +8,10 @@ let vm = new Vue({
 		langSwitcherOpen: false,
 
 		investorOpen: 0,
-		load: false
+		load: false,
+
+		mapLayer: 1,
+		mapsTab: 1
 	}
 });
 
