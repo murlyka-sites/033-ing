@@ -4,8 +4,26 @@
 	border none
 	text-decoration none
 	user-select none
+	max-width 100%
 
 	&_size {
+		&_xs {
+			padding 15px 15px 13px
+			font-size 16px 
+			line-height 1.2 
+			border-radius 30px
+			
+			@media (min-width $sm) {
+				font-size 18px 
+			}
+			
+			@media(min-width $xlg) {
+				padding 20px  30px 18px
+				border-radius 45px
+				font-size 20px
+			}
+		}
+		
 		&_sm {
 			padding 15px 20px 13px
 			font-size 16px 
@@ -25,7 +43,8 @@
 	}
 	
 	&_outline {
-		border 2px solid
+		background transparent
+		border 1px solid
 	}
 	
 	&_theme {
@@ -48,6 +67,16 @@
 					background white
 					color $color-dark
 				}
+				
+				&-dark {
+					color $color-graphite
+					border-color $color-dark
+				
+					&:hover {
+						color $color-graphite
+						background $color-dark 
+					}
+				}
 			}
 			
 			&-dark {
@@ -59,6 +88,45 @@
 					background $color-dark 
 				}
 			}
+		}
+	}
+}
+
+.ui-dropdown {
+	display none
+	position absolute	
+	z-index 10
+	padding 0
+	width 175px
+	border-radius 6px
+	overflow hidden
+	list-style-type none
+	background $color-granite
+	color white
+	
+	&_open {
+		display block
+	}
+	
+	&_top {
+		top 100%
+		left 0
+		transform translate(-15px, 0)
+	}
+	
+	&__item {
+		// padding 15px
+	}
+	
+	&__link {
+		display block
+		padding 10px 15px
+		color inherit
+		text-decoration none
+		font-size 14px
+		
+		&:hover {
+			background $color-shale
 		}
 	}
 }
@@ -75,30 +143,36 @@
 
 .ui-search-top {
 	position relative
+	background #404759
 	color white
 	border-radius 25px
-	border 2px solid white
+	height 45px
 	
 	&__field {
-		visible hidden
+		display none
 		width 100%
 		height 45px
-		padding 0 25px 
+		padding 0 40px 0 25px
 		border none
 		background transparent 
-		text-align right
+		text-align left
 		color white
 		font-family Suisse
 		font-size 15px		
 		placeholder white
 		
+
+		@media (min-width 1200px) {
+			display block
+			padding 0 40px 0 25px
+		}
 	}
 	
 	&__button {
 		position absolute
 		top 50%
-		transform translate(0,-50%)
-		left 10px
+		transform translate(0,-55%)
+		right 10px
 		width 26px
 		height 26px
 		color white
@@ -111,7 +185,7 @@
 
 .ui-lang-switcher {
 	position relative
-	border 2px solid white
+	background #404759
 	color white
 	font-family Suisse
 	border-radius 25px
@@ -122,25 +196,38 @@
 	&_open {
 	}
 	
+	&__svg {
+		
+		stroke currentColor
+	}
+	
 	&__current {
 		display flex
 		align-items center
 		height 45px
 		padding 0 25px
 		cursor pointer
+		border-radius 25px
+		
+		&_open {
+			background white
+			color #404759
+			stroke #404759
+		}
 	}
 	
 	&__corner {
 		margin-left 10px
+		color inherit
 	}
 	
 	&__list {
-		padding-top 45px 
-		top -2px
-		left -2px
-		right -2px
+		padding-top 50px 
+		top 0px
+		left 0px
+		right 0px
 		border-radius 25px
-		border 2px solid
+		background #404759
 		position absolute
 		overflow hidden
 		z-index -1  
@@ -151,12 +238,14 @@
 		align-items center
 		height 45px
 		padding 0 25px
-		border-radius 25px
+		// border-radius 25px
 		cursor pointer
+		
+		color white
 		
 		&:hover {
 			background white
-			color black 
+			color #404759
 		}
 		
 		&_current {
@@ -269,4 +358,67 @@
 		}
 	
 	}
+}
+
+.ui-form-row {
+	display block
+	margin-bottom 25px
+	
+	&__label {
+		display block
+		font-family Roboto, sans-serif
+		margin-bottom 10px
+		font-size 18px
+	}
+	
+	&__field {}
+}
+
+.ui-row-checkbox {
+	display flex
+	align-items center
+	margin-bottom 25px
+	
+	&__box {
+		margin-right 10px
+	}
+	
+	&__label {}
+}
+
+
+.ui-field {
+	height 50px
+	padding 0 15px
+	border-radius 25px
+	border 1px solid #b6b6b6
+	background transparent
+	color white
+}
+
+.ui-textarea {
+	height 50px
+	padding 10px 15px
+	border-radius 25px
+	border 1px solid #b6b6b6
+	background transparent
+	color white
+	resize none
+}
+
+.--h-90 {
+	height 90px
+}
+
+.--h-175 {
+	height 175px
+}
+
+.--w-340 {
+	width 340px
+}
+
+.available {
+	display block
+	width 100%
 }

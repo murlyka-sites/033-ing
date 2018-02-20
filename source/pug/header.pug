@@ -1,0 +1,70 @@
+header.section.section-header.section-header_inside: .section__container.section-header__container
+	.section-header__column.section-header__column_logo
+		img.section-header__logo(src="images/logo.png" width="60" height="66" alt="")
+
+	.section-header__column.section-header__column_nav
+		nav.nav-top
+			ul.nav-top__list
+				li.nav-top__item: a.nav-top__link(href="#") О регионе
+				li.nav-top__item
+					a.nav-top__link(href="#") Новости
+					ul.ui-dropdown.ui-dropdown_top
+						li.ui-dropdown__item: a.ui-dropdown__link(href="#") О регионе
+						li.ui-dropdown__item: a.ui-dropdown__link(href="#") Новости
+						li.ui-dropdown__item: a.ui-dropdown__link(href="#") Карта
+						li.ui-dropdown__item: a.ui-dropdown__link(href="#") Преимущества
+						li.ui-dropdown__item: a.ui-dropdown__link(href="#") Проекты
+				li.nav-top__item: a.nav-top__link(href="#") Карта
+				li.nav-top__item: a.nav-top__link(href="#") Преимущества
+				li.nav-top__item: a.nav-top__link(href="#") Проекты
+				li.nav-top__item: a.nav-top__link(href="#") Истории успеха
+				li.nav-top__item: a.nav-top__link(href="#") Контакты
+				li.nav-top__item.hidden
+					a.nav-top__link.nav-top__button(href="#" data-dropdown-next) Ещё
+					ul.ui-dropdown.ui-dropdown_top.nav-top__more
+	.section-header__column.section-header__column_search
+		.ui-search-top.section-header__search
+			button.ui-search-top__button.button-with-icon
+				svg.button-with-icon__svg(width="26" height="26")
+					circle(cx="13" cy="13" r="10" fill="none" stroke-width="2")
+					line(x1="20" y1="20" x2="26" y2="26" stroke-width="2")
+			input.ui-search-top__field(type="search" placeholder="Поиск")
+	.section-header__column.section-header__column_lang
+		.ui-lang-switcher(:class="{'ui-lang-switcher_open': langSwitcherOpen }" v-cloak)
+			.ui-lang-switcher__current(:class="{'ui-lang-switcher__current_open': langSwitcherOpen }" @click="langSwitcherOpen = !langSwitcherOpen")
+				| {{ lang.current }}
+				button.ui-lang-switcher__corner.button-with-icon()
+					svg.button-with-icon__svg(width="13" height="8")
+						path(d="M 1 1 7 7 13 1" stroke="" stroke-width="2" fill="none")
+			.ui-lang-switcher__list(:class="{'hidden': !langSwitcherOpen }")
+				.ui-lang-switcher__item(:class="{'ui-lang-switcher__item_current': lang.current == 'Eng'}" @click="lang.current = 'eng'; langSwitcherOpen = false;") Eng
+				.ui-lang-switcher__item(:class="{'ui-lang-switcher__item_current': lang.current == 'Рус'}" @click="lang.current = 'rus'; langSwitcherOpen = false;") Рус
+	.section-header__column.section-header__column_menu
+		a.section-header__menu.button-with-icon(href="#mobile-menu" data-fancybox)
+			svg.menu(width="40" height="40")
+				line.menu__bar(x1="3" y1="8" x2="37" y2="8")
+				line.menu__bar(x1="3" y1="20" x2="37" y2="20")
+				line.menu__bar(x1="3" y1="20" x2="37" y2="20")
+				line.menu__bar(x1="3" y1="32" x2="37" y2="32")
+.hidden
+	.popup#mobile-menu
+		header.popup__header Меню
+		.popup__body
+			nav.nav-popup
+				ul.nav-popup__list
+					li.nav-popup__item: a.nav-popup__link(href="#") О регионе
+					li.nav-popup__item: a.nav-popup__link(href="#") Новости
+					li.nav-popup__item: a.nav-popup__link(href="#") Карта
+					li.nav-popup__item: a.nav-popup__link(href="#") Преимущества
+					li.nav-popup__item: a.nav-popup__link(href="#") Проекты
+					li.nav-popup__item: a.nav-popup__link(href="#") Истории успеха
+					li.nav-popup__item: a.nav-popup__link(href="#") Контакты								
+		footer.popup__foo
+			nav.nav-social
+				ul.nav-social__list
+					li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+						path.icon-social-dark__path(d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1")
+					li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+						path.icon-social-dark__path(d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd")
+					li.nav-social__item: a.nav-social__link(href="#"): svg.nav-social__icon.icon-social-dark(width="56.3" height="56.3" viewBox="0 0 56.3 56.3")
+						path.icon-social-dark__path(d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff")

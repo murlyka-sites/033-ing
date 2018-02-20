@@ -48,7 +48,142 @@
 	}
 }
 
+.h2 {
+	margin 0
+	font-family William 
+	font-size 20px
+	line-height 1.1	
+	
+	@media (min-width $sm) {
+		font-size 25px
+	}
+	
+	@media (min-width $md) {
+		font-size 40px 
+	}
+	
+	@media (min-width $mlg) {
+		font-size 45px 
+	}
+	
+	@media (min-width $xlg) {
+		font-size 60px 
+	}
+}
+
+.h3 {
+	margin 0
+	font-family William 
+	font-size 20px
+	line-height 1.1	
+	
+	@media (min-width $sm) {
+		font-size 25px
+	}
+	
+	@media (min-width $md) {
+		font-size 35px 
+	}
+	
+	@media (min-width $mlg) {
+		font-size 40px 
+	}
+	
+	@media (min-width $xlg) {
+		font-size 50px 
+	}
+}
+
+.h4 {
+	margin 0
+	font-family William 
+	font-size 18px 
+	line-height 1.1
+	
+	@media (min-width $mlg) {
+		font-size 20px 
+	}
+	
+	@media (min-width $xlg) {
+		font-size 25px 
+	}
+}
+
 .p {
+	font-family Roboto, sans-serif
+	font-size 14px
+	margin-bottom 3em 
+	line-height 25px
+	
+	@media (min-width $sm) {
+		
+	}
+	
+	@media (min-width $md) {
+		font-size 16px
+		line-height 30px
+	}
+}
+
+.blockquote {
+	position relative
+	margin 0
+	border 12px solid
+	padding 10px
+	margin-bottom 60px
+	font-family William 
+	font-size 14px
+	
+	@media (min-width $sm) {
+		padding 25px
+		border 12px solid
+		font-size 18px 
+	}
+	
+	@media (min-width $md) {
+		padding 50px
+		font-size 22px
+	}
+	
+	&__separator {
+		margin 15px 0 20px
+		height 1px
+		background $color-forest-wolf
+	}
+	
+	&__number {
+		margin-bottom 5px 
+		font-family Roboto, sans-serif
+		font-size 16px 
+	}
+	
+	&__date {
+		opacity 0.66
+		font-family Roboto, sans-serif
+		font-size 14px 
+	}
+	
+	&__corner {
+		position absolute
+		top 100%
+		left 70%
+	}
+	
+	&_theme {
+		&_quartz {
+			border-color $color-quartz
+			fill $color-quartz
+		}
+		
+		&_forest-wolf {
+			border-color $color-forest-wolf
+			fill $color-forest-wolf
+		}
+	}
+}
+
+
+.text {
 	font-size 16px
 	margin-bottom 1em 
 	
@@ -62,32 +197,20 @@
 }
 
 .icon-social-dark {
-	border 2px solid $color-dark
 	border-radius 50%
-	
-	&__path {
-		fill $color-dark
-	}
+	background #d3d1cc
 	
 	&:hover {
-		background $color-dark
-		
-		.icon-social-dark__path {
-			fill white
-		}
+		background $color-graphite
 	}
 }
 
 .icon-social {
-	border 2px solid white
 	border-radius 50%
+	background $color-graphite
 	
 	&:hover {
-		background white
-		
-		.icon-social__path {
-			fill $color-dark
-		}
+		background #d3d1cc
 	}
 }
 
@@ -111,3 +234,83 @@
 	}
 }
 
+.text-granite {
+	color $color-granite
+}
+
+.text-dark {
+	color $color-dark
+}
+
+.text-quartz {
+	color $color-quartz
+}
+
+.table {
+	width 100%
+	border-spacing 0
+	font-family Roboto, sans-serif 
+	font-size 12px 
+	border 1px solid #b6b6b6
+	border-radius 5px
+	
+	@media (min-width 480px) {
+		font-size 14px 
+	}
+	
+	@media (min-width $sm) {
+		font-size 18px 
+	}
+	
+	th {
+		border-bottom 1px solid #b6b6b6
+		background-color #edecea
+		color $color-graphite
+		padding 5px
+		
+		@media (min-width 480px) {
+			padding 10px
+		}
+		
+		@media (min-width $sm) {
+			padding 25px
+		}
+	}
+	
+	tr:nth-child(2n+1) {
+		td {
+			background #edecea
+		}
+	}
+	
+	td {
+		padding 5px
+		text-align center
+		
+		@media (min-width 480px) {
+			padding 10px 
+		}
+		
+		@media (min-width $sm) {
+			padding 25px
+		}
+	}
+}
+
+
+.paper-forest-wolf {
+	background $color-forest-wolf
+}
+
+.fully-img {
+	width 100%
+	height auto
+}
+
+.circle-img {
+	border-radius 50%
+}
+
+.a {
+	color inherit
+}

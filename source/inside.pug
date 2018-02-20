@@ -1,0 +1,333 @@
+doctype html
+html(lang="ru")
+	head
+		include pug/head
+	body.page
+		#app
+			include pug/header
+			.section-wallpaper: picture
+				source(srcset="images/bg-main.jpg" media="(min-width: 1220px)")
+				img.section-wallpaper__bg(src="images/xs-bg-main.jpg")
+			.section-article.section
+				.section__container: header.section-article__header.paper-forest-wolf
+					
+					.section-article__top
+						.section-article__buttons
+							a.section-article__button.button.button_outline.button_size_sm.button_theme_outline-dark(href="#popup-form-1" data-fancybox) Прямая линия с губернатором
+							a.section-article__button.button.button_outline.button_size_sm.button_theme_outline-dark(href="#popup-form-2" data-fancybox) Получить поддержку
+						.section-article__social
+							include pug/social
+					time.section-article__date 13  ДЕКАБРЯ 2017
+					h1.section-article__title Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»
+				.section__container: img.fully-img.section-article__pr(src="images/article-full-pr.jpg" width="1329" height="589" alt="")
+				.section__container
+					.section-article__inner
+						.inner-article
+							.inner-article__column.inner-article__column_left
+								.article-author-md.text-dark
+									img.article-author-md__pr.circle-img(src="images/success.jpg" width="178" height="178")
+									.article-author-md__title.h4 Александр Невзоров
+									.article-author-md__date 13  ДЕКАБРЯ 2017
+							.inner-article__column.inner-article__column_right
+								h2.h2 Великий Новгород
+								p.p Вели́кий Но́вгород (до 1999 года официальное название — Но́вгород. В настоящее время является сокращённым названием города) — город на северо-западе России. Административный центр Новгородской области и Новгородского района, в который не входит, обладая статусом города областного значения[4][5] и образуя городской округ Великий Новгород c единственным населённым пунктом в его составе.[6] Город воинской славы.
+
+								p.p Великий Новгород — один из древнейших и известнейших городов России (в 2009 году официально отметил 1150-летие). Место призвания летописного Рюрика и зарождения российской государственности. В Средние века — центр Новгородской Руси, а затем центр Новгородской земли в составе Киевской Руси и Русского государства.
+
+								.article-slider.paper-forest-wolf
+									.swiper-container
+										.swiper-wrapper: each i in [1,2,3,4,5]
+											.swiper-slide
+												a(href="images/article-slider.jpg" data-fancybox="article-slider"): img.article-slider__pr.fully-img(src="images/article-slider.jpg" width="988" height="530")
+												.article-slider__desc
+													.article-slider__title Великий Новгород 2017
+													.article-slider__date 13  ДЕКАБРЯ 2017
+									.article-slider__nav
+										.article-slider__pagination
+										button.article-slider__prev: svg.article-slider__icon(width="11" height="19" stroke="black" viewBox="0 0 11 18"): path(d="M 9 0 10 1 3 9 10 16 9 17 1 9" )
+										button.article-slider__next: svg.article-slider__icon(width="11" height="19" stroke="black" viewBox="0 0 11 18"): path(d="M 2 0 1 1 8 9 1 16 2 17 10 9" )
+								
+								p.p При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).
+
+								p.p Новгород не подвергся монгольскому нашествию; хотя он и платил дань Орде, но сохранил уникальные памятники древнерусской архитектуры домонгольского периода и был единственным из древних русских городов, избежавшим упадка и дробления в XI—XII вв.
+
+								blockquote.blockquote.blockquote_theme_forest-wolf.text-granite Великий Новгород расположен на Приильменской низменности, на реке Волхов, в 6 км от озера Ильмень, в 552 км к северо-западу от Москвы и в 145 км к юго-востоку от Санкт-Петербурга. 
+									svg.blockquote__corner(width="40" height="60")
+										path(d="M 40 0 40 12 0 60 0 0" fill="white")
+										rect(x="-18" width="30" height="24"  rx="12" ry="12")
+										path(d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0")
+								
+								p.p Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+
+								p.p Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. 
+						.section-article__frame
+							h3.h3.text-granite Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведениябизнеса
+						.inner-article
+							.inner-article__column.inner-article__column_left
+							.inner-article__column.inner-article__column_right
+								p.p Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+									br
+									| Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								.download
+									.download__title
+									.download__grid: each i in [1,2,3,4,5,6]
+										.download__card: a.card-download(href="#" download)
+											img.card-download__icon(src="images/pdf.png" width="55" height="63")
+											.card-download__desc
+												.card-download__title Великий Новгород , история
+												.card-download__size 345 kB, doc
+
+								p.p При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).
+
+						.inner-article
+							.inner-article__column.inner-article__column_left
+								.article-author-sm.text-dark
+									img.article-author-sm__pr.circle-img(src="images/success.jpg" width="100" height="100")
+									.article-author-sm__title.h4 Александр Невзоров
+									.article-author-sm__date 13  ДЕКАБРЯ 2017
+							.inner-article__column.inner-article__column_right
+								blockquote.blockquote.blockquote_theme_forest-wolf.text-dark.paper-forest-wolf Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+									svg.blockquote__corner(width="40" height="60")
+										path(d="M 40 0 40 12 0 60 0 0" )
+										rect(x="-18" width="30" height="24"  rx="12" ry="12")
+										path(d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0")
+								p.p Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+									br
+									| Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+								h4.h4.text-dark.section-article__h4 Карта
+								.section-article__map: div(style="height: 450px; background: gray")
+								p.p Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+									br
+									| Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								.article-history-success
+									.article-history-success__content
+										.article-history-success__header
+											img.article-history-success__pr.circle-img(src="images/success.jpg" width="178" heihgt="178")
+											.article-history-success__desc
+												.article-history-success__title Медовый дом
+												.article-history-success__subtitle Объем инвестиций — 40 млн. руб
+										.article-history-success__text Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. 
+										a(href="#"): img.article-history-success__more(src="images/imore.svg" width="26" height="26")
+									.article-history-success__bg(style="background-image: url('images/article-success-story.jpg');")
+
+								p.p Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								table.table: tbody
+									tr
+										th Год
+										th Период заселения
+										th Численность населения
+										th Количество
+									tr
+										td 1571
+										td 1998-2013
+										td Включено
+										td 1 000 000
+									tr
+										td 1617
+										td 1998-2014
+										td Включено
+										td 1 500 000
+									tr
+										td 1811
+										td 1998-2015
+										td Включено
+										td 2 000 000
+									tr
+										td 1825
+										td 1998-2016
+										td Включено
+										td 2 500 000
+									tr
+										td 1833
+										td 1998-2017
+										td Включено
+										td 3 000 000
+									tr
+										td 1840
+										td 1998-2018
+										td Включено
+										td 3 500 000
+									tr
+										td 1856
+										td 1998-2019
+										td Включено
+										td 4 000 000
+								p.p.text-quartz На 1 января 2017 года по численности населения город находился на 92 месте из 1112
+								p.p За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								blockquote.blockquote.blockquote_theme_quartz.text-dark Великий Новгород расположен на Приильменской низменности, на реке Волхов, в 6 км от озера Ильмень, в 552 км к северо-западу от Москвы и в 145 км к юго-востоку от Санкт-Петербурга. 
+									.blockquote__separator
+									.blockquote__number Номер закона
+									.blockquote__date дата принятия 
+									svg.blockquote__corner(width="40" height="60")
+										path(d="M 39 0 39 12 0 60 0 0" fill="white")
+										rect(x="-18" width="30" height="24"  rx="12" ry="12")
+										path(d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0")
+
+								p.p При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).
+
+								.article-form
+									.article-form__title Хотите задать вопрос или получить поддержку
+									.article-form__body
+										.article-form__column.article-form__column_left
+											.ui-form-row
+												.ui-form-row__label Ваше имя
+												input.ui-form-row__field.ui-field.available(type="text")
+											.ui-form-row
+												.ui-form-row__label Электронная почта
+												input.ui-form-row__field.ui-field.available(type="text")
+											.ui-form-row
+												.ui-form-row__label телефон
+												input.ui-form-row__field.ui-field.available(type="text")
+										.article-form__column.article-form__column_right
+											.ui-form-row
+												.ui-form-row__label Комментарий
+												textarea.ui-form-row__field.ui-textarea.available.--h-175
+											.popup-form__form-foo
+												.popup-form__form-foo-column: label.ui-row-checkbox.popup-form__form-checkbox
+													.ui-row-checkbox__box
+														input(type="checkbox")
+													.ui-row-checkbox__label Я согласен на обработку
+														br
+														| персональных данных
+												.popup-form__form-column
+													button.popup-form__form-foo-button.button.button_theme_white.button_size_sm Отправить
+								p.p Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+
+								.article-gallery-slider
+									.article-gallery-slider__header.text-dark
+										h4.h4.article-gallery-slider__title Фотогалерея
+										.article-gallery-slider__nav
+											button.article-slider__prev: svg.article-slider__icon(width="11" height="19" stroke="black" viewBox="0 0 11 18"): path(d="M 9 0 10 1 3 9 10 16 9 17 1 9" )
+											button.article-slider__next: svg.article-slider__icon(width="11" height="19" stroke="black" viewBox="0 0 11 18"): path(d="M 2 0 1 1 8 9 1 16 2 17 10 9" )
+									.article-gallery-slider__body
+										.swiper-container
+											.swiper-wrapper: each i in [1,2,3,1,2,3]
+												.swiper-slide
+													img.fully-img(src="images/gallery/"+i+".jpg")
+
+								p.p Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+								
+								.article-edge.text-dark
+									h4.h4.article-edge__title Инфографика
+									.article-edge__body
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/12-dark.svg" width="39" height="48")
+												.card-edge__title 400 МВт
+												.card-edge__desc доступные 
+													br.hidden.visible-md
+													| энергетические 
+													br.hidden.visible-md
+													| ресурсы
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/3-dark.svg" width="48" height="47")
+												.card-edge__title 100
+												.card-edge__desc инвестиционных 
+													br.hidden.visible-md
+													| площадок
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/4-dark.svg" width="43" height="48")
+												.card-edge__title НТИ
+												.card-edge__desc пилотный 
+													br.hidden.visible-md
+													| регион НТИ
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/11-dark.svg" width="48" height="47")
+												.card-edge__title 8 млн.
+												.card-edge__desc кубических 
+													br.hidden.visible-md
+													| метров лесосеки
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/7-dark.svg" width="43" height="47")
+												.card-edge__title 13.5%
+												.card-edge__desc налог 
+													br.hidden.visible-md
+													| на прибыль
+										.article-edge__card
+											.card-edge
+												header.card-edge__header: img.card-edge__pr(src="images/edge/8-dark.svg" width="45" height="42")
+												.card-edge__title Льготы
+												.card-edge__desc для резидентов 
+													br
+													| индустриальных парков, 
+													br.hidden.visible-md
+													| технопарков, инкубаторов
+								p.p  Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).
+
+								.article-gov(style="background-image: url(images/bg-article-gov.jpg)")
+									.article-gov__content
+										.article-gov__position Губернатор Новгородской области
+
+										.article-gov__name Андрей Сергеевич Никитин
+										.article-gov__desc Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведения бизнеса
+										a(href="#"): img.article-gov__more(src="images/imore.svg" width="40" heihgt="40")
+
+								p.p Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								.article-success(style="background-image: url(images/bg-article-success.jpg)")
+									.article-success__content
+										.article-success__title История успеха 
+											br
+											| Иванова Ивана Ивановича
+										.article-success__button.button.button_size_sm.button_theme_white Читать
+
+								p.p Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».
+
+								.article-foo
+									img(src="images/share.png", alt="")
+
+									.article-author-lg.text-dark
+										img.article-author-lg__pr.circle-img(src="images/success.jpg" width="100" height="100")
+										div
+											.article-author-lg__title.h4 Александр Невзоров
+											.article-author-lg__date 13  ДЕКАБРЯ 2017
+								.article-arhive
+									a.button.button_size_sm.button_outline.button_theme_outline-dark.article-arhive__button(href="#") АНОНСЫ СОБЫТИЙ
+									.article-arhive__body
+											.article-arhive__cards
+												.article-arhive__card: .card-archive
+													a.card-archive__column.card-archive__column_pr(href="#")
+														img.card-archive__pr(src="images/news/1.jpg" width="135" height="135")
+													.card-archive__column.card-archive__column_desc
+														time.card-archive__date() 13  ДЕКАБРЯ 2017
+														a.card-archive__title(href="#") Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»
+
+												.article-arhive__card: .card-archive
+													a.card-archive__column.card-archive__column_pr(href="#")
+														img.card-archive__pr(src="images/news/1.jpg" width="135" height="135")
+													.card-archive__column.card-archive__column_desc
+														time.card-archive__date() 13  ДЕКАБРЯ 2017
+														a.card-archive__title(href="#") Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»
+
+												.article-arhive__card: .card-archive
+													a.card-archive__column.card-archive__column_pr(href="#")
+														img.card-archive__pr(src="images/news/2.jpg" width="135" height="135")
+													.card-archive__column.card-archive__column_desc
+														time.card-archive__date() 5–10  МАРТА 2018
+														a.card-archive__title(href="#") Принимаем заявки на бизнес-миссию новгородских предпринимателей в Токио
+
+												.article-arhive__card: .card-archive
+													a.card-archive__column.card-archive__column_pr(href="#")
+														img.card-archive__pr(src="images/news/3.jpg" width="135" height="135")
+													.card-archive__column.card-archive__column_desc
+														time.card-archive__date() 5–6  ДЕКАБРЯ 2018
+														a.card-archive__title(href="#") Принимаем заявки на бизнес-миссию новгородских предпринимателей в Токио
+			footer.section-foo.section
+				.section__container.section-foo__container
+					.section-foo__column.section-foo__column_logo
+						img.section-foo__logo(src="images/logo.png" width="60" height="66" alt="Логотип")
+					.section-foo__column.section-foo__column_copy
+						.section-foo__copy Агентство развития новгородской области 2018
+					.section-foo__column.section-foo__column_social
+						include pug/social-forest
+		include pug/popup
+		include pug/scripts
+		

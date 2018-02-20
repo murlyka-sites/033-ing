@@ -15,43 +15,144 @@
 	font-family Suisse 
 }
 
-.section {
-	max-width 1920px
-	margin auto
-	
-	&__container {
-		padding 0 10px 
-		@media (min-width $md) {
-			padding 0 30px 
-		}
-	}
-}
-
-
-
-
-
-
-
 .popup {
 	display inline-flex !important
 	flex-direction column
 	width 100%
 	height 100%
 	padding 0 !important
+	margin 0 !important
 	
 	&__header {
 		padding 20px 10px
 		text-align center
 		font-weight 700 
 		font-size 30px 
-		border-bottom 3px solid $color-dark
-		color $color-dark
+		border-bottom 3px solid $color-graphite
+		color $color-graphite
 	}
 	
 	&__foo {
 		margin-top auto
 		padding 20px 10px
+	}
+}
+
+.popup-form {
+	width 100% !important
+	height 100% !important
+	padding 20px 0 !important
+	margin 0 !important
+	background $color-granite !important
+	color white
+	
+	&__header {
+		margin-bottom 25px 
+		text-align center
+		
+		@media (min-width 480px) {
+			display flex
+			align-items center
+			text-align left
+		}
+		
+		@media (min-width $md) {
+			margin-bottom 55px 
+		}
+	}
+	
+	&__body {
+		@media (min-width $md) {
+			display flex
+		}
+	}
+	
+	&__column {
+		
+		&_left {
+			@media(min-width $md) {
+				width 380px
+				margin-right 50px
+			}
+			
+			@media (min-width 1220px) {
+				margin-right 85px
+			}
+		}
+		
+		&_right {
+			flex auto
+		}
+	}
+	
+	&__pr {
+		width 100px
+		height auto
+		margin-bottom 15px 
+		
+		@media (min-width 480px) {
+			margin-bottom 0
+			margin-right 20px
+		}
+		
+		@media (min-width $md) {
+			width 178px
+			margin-right 40px
+		}
+	}
+	
+	&__form-foo {
+		padding 0 0 25px
+				
+		@media (min-width $sm) {
+			@supports (flex-wrap wrap) {
+				display flex
+				flex-wrap wrap
+				justify-content space-between
+			}
+		}
+		
+		&-column {
+			
+		}
+		
+		&-button {
+			margin 0 10px 10px 
+			
+			@media (min-width 600px) {
+				margin 0 10px
+				
+				&:first-child {
+					margin-left 0
+				}
+				
+				&:last-child {
+					margin-right 0
+				}
+			}
+			
+			
+		}
+	}
+	
+	&__form-column {
+		margin-right 30px
+		
+		@supports(flex-wrap wrap) {
+			display flex
+			flex-wrap wrap
+			justify-content center
+		}
+		
+		
+		&:last-child {
+			margin-right 0
+		}
+	}
+	
+	&__form-checkbox {
+		flex none
+		margin-right 20px
 	}
 }
 
@@ -63,26 +164,28 @@
 	}
 	
 	&__item {
-		border-bottom 2px solid $color-dark 
-		color $color-dark
+		border-bottom 2px solid $color-graphite 
+		color $color-graphite
 		font-weight 600 
 	}
 	
 	&__link {
 		display block
-		color $color-dark
+		color $color-graphite
 		text-decoration none
 		font-size 20px 
 		padding 10px 
 		
 		&:hover {
-			background $color-dark
+			background $color-graphite
 			color white 
 		}
 	}
 }
 
 .nav-top {
+	display flex
+	
 	@media (min-width $md) {
 		font-family Suisse
 		font-size 18px
@@ -97,6 +200,7 @@
 	}
 	
 	&__list {
+		flex none
 		display flex
 		padding 0
 		margin 0
@@ -104,14 +208,16 @@
 	}
 	
 	&__item { 
-		margin-right 12px 
+		position relative
+		padding-right 12px 
+		flex none
 	
 		@media (min-width $lg) {
-			margin-right 15px 
+			padding-right 15px 
 		}
 		
 		@media (min-width $xlg) {
-			margin-right 20px 
+			padding-right 20px 
 		}
 	}
 	
@@ -152,12 +258,96 @@
 	}
 	
 	&__icon {
-		width 49px 
-		height 49px
+		width 41px 
+		height 41px
 		
 		@media (min-width $xlg) {
 			width 60px
 			height 60px
+		}
+	}
+}
+
+.card-archive {
+	display flex
+	
+	@media (min-width $lg) {
+		min-height 165px
+	}
+	
+	&__column {
+		&_pr {
+			flex none
+			margin-right 10px
+			width 70px 
+			
+			@media (min-width $sm) {
+				width 120px 
+			}
+			
+			@media (min-width $md) {
+				margin-right 20px 
+			}
+			
+			@media (min-width $xlg) {
+				width 250px 
+				margin-right 50px
+			}
+		}
+		
+		&_desc {
+			@media (min-width $sm) {
+				padding-top 5px 
+			}
+			
+			@media (min-width $xlg) {
+				padding-top 25px 
+			}
+		}
+	}
+	
+	&__pr {
+		display block
+		width 100%
+		height auto
+	}
+	
+	&__date {
+		display block
+		margin-bottom 5px
+		font-family Suisse 
+		font-size 10px 
+		color $color-dark
+	}
+	
+	&__title {
+		font-size 14px 
+		text-decoration none
+		color $color-dark
+		font-family William 
+		
+		&:hover {
+			text-decoration underline
+		}
+		
+		@media (min-width $xs) {
+			font-size 20px 
+		}
+		
+		@media (min-width $sm) {
+			font-size 16px 
+		}
+		
+		@media (min-width $md) {
+			font-size 18px
+		}
+		
+		@media (min-width $lg) {
+			font-size 18px 
+		}
+		
+		@media (min-width $xlg) {
+			font-size 25px 
 		}
 	}
 }
@@ -355,7 +545,7 @@
 	color white
 	
 	@media (min-width $sm) {
-		min-height 825px
+		height 825px
 		padding 100px 0 0
 	}
 	
@@ -559,68 +749,146 @@
 }
 
 .section-investor-window {
-	position relative
-	
-	background #8e8e8d 
+	position relative	
+	background $color-granite
 	color white
+	padding 45px 0 30px
 	
-	
-	
-	&__inner {
-		padding 40px 0 20px
-		
-		@media (min-width $md) {
-			padding 100px 0 40px
-		}
-		
-		@media (min-width $xlg) {
-			padding 120px 0 60px
-		}
+	@media (min-width 768px) {
+		padding 75px 0 90px	
 	}
 	
 	&__title {
 		margin-bottom 20px 
 		
 		@media (min-width $xs) {
-			margin-bottom 0
-		}
-	}
-
-	&__header {
-		margin-bottom 25px
-		
-		@media (min-width $xs) {
-			display flex
-			justify-content space-between
 			margin-bottom 50px
 		}
+	}
+	
+	&__columns {		
 		
-		@media (min-width $xlg) {
-			margin-bottom 100px
+		
+		// @supports(flex-wrap wrap) {
+		// 	display flex
+		// 	flex-wrap wrap
+		// }
+		
+		display -ms-grid
+		display grid
+		grid-gap 30px 10px
+		-ms-grid-columns 1fr
+		grid-template-columns 1fr
+		
+		@media (min-width $sm) {
+		}
+		
+		@media (min-width $md) {
+			grid-template-columns 1fr 1fr
+			-ms-grid-columns 1fr 1fr
+		}
+		
+		@media (min-width $mlg) {
+			grid-gap 40px
+			-ms-grid-columns 1fr 1fr 370px
+			grid-template-columns 1fr 1fr 370px
 		}
 	}
 	
-	&__list {
+	&__column {
+		padding 0 0 20px
+		 
+		@media (min-width $md) {
+			padding-right 40px 
+		}
 		
+		
+		@supports (grid-gap) {
+			padding 0
+		}
+		
+		&:last-child {
+			padding-right 0
+		}
+    
+    &:nth-child(2) {
+    	-ms-grid-row 2
+    	
+    	@media (min-width $md) {
+    		-ms-grid-row 1
+    		-ms-grid-column 2
+    	}
+    }
+    
+    &:nth-child(3) {
+    	-ms-grid-row 3
+    	
+    	@media (min-width $md) {
+    		-ms-grid-row 2
+    	}
+    	
+    	@media (min-width $mlg) {
+	    	-ms-grid-row 1
+	    	-ms-grid-column 3
+    	}
+    }
+	}
+
+	// &__header {
+	// 	margin-bottom 25px
+		
+	// 	@media (min-width $xs) {
+	// 		display flex
+	// 		justify-content space-between
+	// 		margin-bottom 50px
+	// 	}
+		
+	// 	@media (min-width $xlg) {
+	// 		margin-bottom 100px
+	// 	}
+	// }
+	
+	// &__list {
+		
+	// }
+	
+	// &__close {
+	// 	position absolute
+	// 	right 0
+	// 	top 0
+		
+	// 	background rgba(0, 0, 0, .35)
+	// 	cursor pointer
+		
+	// 	@supports (position sticky) {
+	// 		position sticky
+	// 		left 100%
+	// 		right auto
+	// 	}
+		
+	// 	&:hover {
+	// 		background rgba(0, 0, 0, .6)
+	// 	}
+	// }
+}
+
+.investor-window-column {
+	&__title {
+		margin-bottom 20px
+		font-size 25px
+		
+		@media (min-width 992px) {
+			margin-bottom 40px
+			font-size 30px
+		}
 	}
 	
-	&__close {
-		position absolute
-		right 0
-		top 0
-		
-		background rgba(0, 0, 0, .35)
-		cursor pointer
-		
-		@supports (position sticky) {
-			position sticky
-			left 100%
-			right auto
-		}
-		
-		&:hover {
-			background rgba(0, 0, 0, .6)
-		}
+	&__card {
+		margin-bottom 40px
+	}
+	
+	&__button {
+		margin 0 10px 10px 0
 	}
 }
 
@@ -676,28 +944,88 @@
 	}
 }
 
-.card-investor-window {
-	&__number {
-		font-family Suisse 
-		font-size 20px
-		line-height 1.1
+.card-investor-window-contact {
+	&__pr {
+		display block
+		margin-bottom 45px
+		border-radius 50%
+	}
+	
+	&__position {
+		margin-bottom 10px
+		font-size 14px
 		
-		@media (min-width $sm) {
-			font-size 25px
-		}
-		
-		@media (min-width $md) {
-			font-size 40px 
-		}
-		
-		@media (min-width $mlg) {
-			font-size 45px 
-		}
-		
-		@media (min-width $xlg) {
-			font-size 60px 
+		@media (min-width 768px) {
+			font-size 16px
 		}
 	}
+	
+	&__name {
+		margin-bottom 10px
+		font-size 18px
+		
+		@media (min-width 768px) {
+			margin-bottom 55px
+			font-size 22px
+		}
+	}
+	
+	&__desc {
+		font-size 22px
+		
+		@media (min-width 768px) {
+			font-size 22px
+		}
+	}
+	
+	&__row {
+		margin-bottom 5px
+		
+		@media (min-width 768px) {
+			margin-bottom 15px
+		}
+	}
+}
+
+.card-investor-window {
+	display flex
+	
+	&__column {
+		&_icon {
+			flex none
+			margin-right 24px
+		}
+		
+		&_desc{
+			padding 4px 0 0
+		}
+	}
+	
+	&__desc {
+		font-size 18px
+	}
+	
+	// &__number {
+	// 	font-family Suisse 
+	// 	font-size 20px
+	// 	line-height 1.1
+		
+	// 	@media (min-width $sm) {
+	// 		font-size 25px
+	// 	}
+		
+	// 	@media (min-width $md) {
+	// 		font-size 40px 
+	// 	}
+		
+	// 	@media (min-width $mlg) {
+	// 		font-size 45px 
+	// 	}
+		
+	// 	@media (min-width $xlg) {
+	// 		font-size 60px 
+	// 	}
+	// }
 }
 
 .card-ver-investor-window {
@@ -782,6 +1110,29 @@
 	}
 }
 
+.map {
+	position relative
+	
+	&__bg {
+		max-width 100%
+		height auto
+	}
+	
+	&__layers {
+		position absolute
+		top 0
+		left 0
+		z-index 2
+		width 100%
+		height 100%
+	}
+}
+
+.hidden {
+	display none
+}
+
+
 .visible-md {
 	@media (min-width $md) {
 		display block
@@ -789,9 +1140,6 @@
 }
 
 
-.hidden {
-	display none
-}
 
 [v-cloak] {
 	display none

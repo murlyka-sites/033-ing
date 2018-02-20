@@ -1,0 +1,64 @@
+div(hidden)
+	#popup-form-1.popup-form
+		.section: .section__container.popup-form__container
+			.popup-form__header
+				img.popup-form__pr(src="images/nikitin.png" width="178" height="178" alt="")
+				h2.h2.popup-form__title Вопрос губернатору 
+					br
+					| Новгородской области
+			.popup-form__body
+				.popup-form__column.popup-form__column_left
+					.ui-form-row
+						.ui-form-row__label Ваше имя
+						input.ui-form-row__field.ui-field.available(type="text")
+					.ui-form-row
+						.ui-form-row__label Электронная почта
+						input.ui-form-row__field.ui-field.available(type="text")
+					.ui-form-row
+						.ui-form-row__label телефон
+						input.ui-form-row__field.ui-field.available(type="text")
+				.popup-form__column.popup-form__column_right
+					.ui-form-row
+						.ui-form-row__label Ваш вопрос
+						textarea.ui-form-row__field.ui-textarea.available.--h-175
+					.popup-form__form-foo
+						.popup-form__form-column: label.ui-row-checkbox.popup-form__form-checkbox
+							.ui-row-checkbox__box
+								input(type="checkbox")
+							.ui-row-checkbox__label Я согласен на обработку
+								br
+								| персональных данных
+						.popup-form__form-column
+							button.button.button_theme_white.button_size_sm.--w-340 Отправить 
+	
+	#popup-form-2.popup-form
+		.section: .section__container.popup-form__container
+			.popup-form__header
+				h2.h2.popup-form__title Получить поддержку
+			.ui-form-row
+				.ui-form-row Шаг 1
+			.popup-form__body
+				.popup-form__column.popup-form__column_left
+					.ui-form-row
+						.ui-form-row__label Ваше имя
+						input.ui-form-row__field.ui-field.available(type="text")
+					.ui-form-row
+						.ui-form-row__label Электронная почта
+						input.ui-form-row__field.ui-field.available(type="text")
+					.ui-form-row
+						.ui-form-row__label телефон
+						input.ui-form-row__field.ui-field.available(type="text")
+				.popup-form__column.popup-form__column_right
+					.ui-form-row
+						.ui-form-row__label Комментарий
+						textarea.ui-form-row__field.ui-textarea.available.--h-175
+					.popup-form__form-foo
+						.popup-form__form-foo-column: label.ui-row-checkbox.popup-form__form-checkbox
+							.ui-row-checkbox__box
+								input(type="checkbox")
+							.ui-row-checkbox__label Я согласен на обработку
+								br
+								| персональных данных
+						.popup-form__form-column
+							button.popup-form__form-foo-button.button.button_theme_white.button_size_sm У меня еще нет проекта
+							button.popup-form__form-foo-button.button.button_theme_white.button_size_sm У меня уже есть проект

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Invest Novgorod</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css?ts=1519163773458">
+  </head>
+  <body class="page">
+    <div id="app">
+      <header class="section section-header section-header_inside">
+        <div class="section__container section-header__container">
+          <div class="section-header__column section-header__column_logo"><img class="section-header__logo" src="images/logo.png" width="60" height="66" alt=""></div>
+          <div class="section-header__column section-header__column_nav">
+            <nav class="nav-top">
+              <ul class="nav-top__list">
+                <li class="nav-top__item"><a class="nav-top__link" href="#">О регионе</a></li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Новости</a>
+                  <ul class="ui-dropdown ui-dropdown_top">
+                    <li class="ui-dropdown__item"><a class="ui-dropdown__link" href="#">О регионе</a></li>
+                    <li class="ui-dropdown__item"><a class="ui-dropdown__link" href="#">Новости</a></li>
+                    <li class="ui-dropdown__item"><a class="ui-dropdown__link" href="#">Карта</a></li>
+                    <li class="ui-dropdown__item"><a class="ui-dropdown__link" href="#">Преимущества</a></li>
+                    <li class="ui-dropdown__item"><a class="ui-dropdown__link" href="#">Проекты</a></li>
+                  </ul>
+                </li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Карта</a></li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Преимущества</a></li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Проекты</a></li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Истории успеха</a></li>
+                <li class="nav-top__item"><a class="nav-top__link" href="#">Контакты</a></li>
+                <li class="nav-top__item hidden"><a class="nav-top__link nav-top__button" href="#" data-dropdown-next>Ещё</a>
+                  <ul class="ui-dropdown ui-dropdown_top nav-top__more"></ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="section-header__column section-header__column_search">
+            <div class="ui-search-top section-header__search">
+              <button class="ui-search-top__button button-with-icon">
+                <svg class="button-with-icon__svg" width="26" height="26">
+                  <circle cx="13" cy="13" r="10" fill="none" stroke-width="2"></circle>
+                  <line x1="20" y1="20" x2="26" y2="26" stroke-width="2"></line>
+                </svg>
+              </button>
+              <input class="ui-search-top__field" type="search" placeholder="Поиск">
+            </div>
+          </div>
+          <div class="section-header__column section-header__column_lang">
+            <div class="ui-lang-switcher" :class="{'ui-lang-switcher_open': langSwitcherOpen }" v-cloak>
+              <div class="ui-lang-switcher__current" :class="{'ui-lang-switcher__current_open': langSwitcherOpen }" @click="langSwitcherOpen = !langSwitcherOpen">{{ lang.current }}
+                <button class="ui-lang-switcher__corner button-with-icon">
+                  <svg class="button-with-icon__svg" width="13" height="8">
+                    <path d="M 1 1 7 7 13 1" stroke="" stroke-width="2" fill="none"></path>
+                  </svg>
+                </button>
+              </div>
+              <div class="ui-lang-switcher__list" :class="{'hidden': !langSwitcherOpen }">
+                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'Eng'}" @click="lang.current = 'eng'; langSwitcherOpen = false;">Eng</div>
+                <div class="ui-lang-switcher__item" :class="{'ui-lang-switcher__item_current': lang.current == 'Рус'}" @click="lang.current = 'rus'; langSwitcherOpen = false;">Рус</div>
+              </div>
+            </div>
+          </div>
+          <div class="section-header__column section-header__column_menu"><a class="section-header__menu button-with-icon" href="#mobile-menu" data-fancybox>
+              <svg class="menu" width="40" height="40">
+                <line class="menu__bar" x1="3" y1="8" x2="37" y2="8"></line>
+                <line class="menu__bar" x1="3" y1="20" x2="37" y2="20"></line>
+                <line class="menu__bar" x1="3" y1="20" x2="37" y2="20"></line>
+                <line class="menu__bar" x1="3" y1="32" x2="37" y2="32"></line>
+              </svg></a></div>
+        </div>
+      </header>
+      <div class="hidden">
+        <div class="popup" id="mobile-menu">
+          <header class="popup__header">Меню</header>
+          <div class="popup__body">
+            <nav class="nav-popup">
+              <ul class="nav-popup__list">
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">О регионе</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Новости</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Карта</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Преимущества</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Проекты</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Истории успеха</a></li>
+                <li class="nav-popup__item"><a class="nav-popup__link" href="#">Контакты								</a></li>
+              </ul>
+            </nav>
+          </div>
+          <footer class="popup__foo">
+            <nav class="nav-social">
+              <ul class="nav-social__list">
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social-dark__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social-dark__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="56.3" height="56.3" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social-dark__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
+                    </svg></a></li>
+              </ul>
+            </nav>
+          </footer>
+        </div>
+      </div>
+      <div class="section-wallpaper">
+        <picture>
+          <source srcset="images/bg-main.jpg" media="(min-width: 1220px)"><img class="section-wallpaper__bg" src="images/xs-bg-main.jpg">
+        </picture>
+      </div>
+      <div class="section-article section">
+        <div class="section__container">
+          <header class="section-article__header paper-forest-wolf">
+            <div class="section-article__top">
+              <div class="section-article__buttons"><a class="section-article__button button button_outline button_size_sm button_theme_outline-dark" href="#popup-form-1" data-fancybox>Прямая линия с губернатором</a><a class="section-article__button button button_outline button_size_sm button_theme_outline-dark" href="#popup-form-2" data-fancybox>Получить поддержку</a></div>
+              <div class="section-article__social">
+                <nav class="nav-social">
+                  <ul class="nav-social__list">
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="41" height="41" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
+                        </svg></a></li>
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="41" height="41" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
+                        </svg></a></li>
+                    <li class="nav-social__item"><a class="nav-social__link" href="#">
+                        <svg class="nav-social__icon icon-social" width="41" height="41" viewBox="0 0 56.3 56.3">
+                          <path class="icon-social__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
+                        </svg></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <time class="section-article__date">13  ДЕКАБРЯ 2017</time>
+            <h1 class="section-article__title">Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»</h1>
+          </header>
+        </div>
+        <div class="section__container"><img class="fully-img section-article__pr" src="images/article-full-pr.jpg" width="1329" height="589" alt=""></div>
+        <div class="section__container">
+          <div class="section-article__inner">
+            <div class="inner-article">
+              <div class="inner-article__column inner-article__column_left">
+                <div class="article-author-md text-dark"><img class="article-author-md__pr circle-img" src="images/success.jpg" width="178" height="178">
+                  <div class="article-author-md__title h4">Александр Невзоров</div>
+                  <div class="article-author-md__date">13  ДЕКАБРЯ 2017</div>
+                </div>
+              </div>
+              <div class="inner-article__column inner-article__column_right">
+                <h2 class="h2">Великий Новгород</h2>
+                <p class="p">Вели́кий Но́вгород (до 1999 года официальное название — Но́вгород. В настоящее время является сокращённым названием города) — город на северо-западе России. Административный центр Новгородской области и Новгородского района, в который не входит, обладая статусом города областного значения[4][5] и образуя городской округ Великий Новгород c единственным населённым пунктом в его составе.[6] Город воинской славы.</p>
+                <p class="p">Великий Новгород — один из древнейших и известнейших городов России (в 2009 году официально отметил 1150-летие). Место призвания летописного Рюрика и зарождения российской государственности. В Средние века — центр Новгородской Руси, а затем центр Новгородской земли в составе Киевской Руси и Русского государства.</p>
+                <div class="article-slider paper-forest-wolf">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><a href="images/article-slider.jpg" data-fancybox="article-slider"><img class="article-slider__pr fully-img" src="images/article-slider.jpg" width="988" height="530"></a>
+                        <div class="article-slider__desc">
+                          <div class="article-slider__title">Великий Новгород 2017</div>
+                          <div class="article-slider__date">13  ДЕКАБРЯ 2017</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide"><a href="images/article-slider.jpg" data-fancybox="article-slider"><img class="article-slider__pr fully-img" src="images/article-slider.jpg" width="988" height="530"></a>
+                        <div class="article-slider__desc">
+                          <div class="article-slider__title">Великий Новгород 2017</div>
+                          <div class="article-slider__date">13  ДЕКАБРЯ 2017</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide"><a href="images/article-slider.jpg" data-fancybox="article-slider"><img class="article-slider__pr fully-img" src="images/article-slider.jpg" width="988" height="530"></a>
+                        <div class="article-slider__desc">
+                          <div class="article-slider__title">Великий Новгород 2017</div>
+                          <div class="article-slider__date">13  ДЕКАБРЯ 2017</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide"><a href="images/article-slider.jpg" data-fancybox="article-slider"><img class="article-slider__pr fully-img" src="images/article-slider.jpg" width="988" height="530"></a>
+                        <div class="article-slider__desc">
+                          <div class="article-slider__title">Великий Новгород 2017</div>
+                          <div class="article-slider__date">13  ДЕКАБРЯ 2017</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide"><a href="images/article-slider.jpg" data-fancybox="article-slider"><img class="article-slider__pr fully-img" src="images/article-slider.jpg" width="988" height="530"></a>
+                        <div class="article-slider__desc">
+                          <div class="article-slider__title">Великий Новгород 2017</div>
+                          <div class="article-slider__date">13  ДЕКАБРЯ 2017</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="article-slider__nav">
+                    <div class="article-slider__pagination"></div>
+                    <button class="article-slider__prev">
+                      <svg class="article-slider__icon" width="11" height="19" stroke="black" viewBox="0 0 11 18">
+                        <path d="M 9 0 10 1 3 9 10 16 9 17 1 9"></path>
+                      </svg>
+                    </button>
+                    <button class="article-slider__next">
+                      <svg class="article-slider__icon" width="11" height="19" stroke="black" viewBox="0 0 11 18">
+                        <path d="M 2 0 1 1 8 9 1 16 2 17 10 9"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <p class="p">При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).</p>
+                <p class="p">Новгород не подвергся монгольскому нашествию; хотя он и платил дань Орде, но сохранил уникальные памятники древнерусской архитектуры домонгольского периода и был единственным из древних русских городов, избежавшим упадка и дробления в XI—XII вв.</p>
+                <blockquote class="blockquote blockquote_theme_forest-wolf text-granite">Великий Новгород расположен на Приильменской низменности, на реке Волхов, в 6 км от озера Ильмень, в 552 км к северо-западу от Москвы и в 145 км к юго-востоку от Санкт-Петербурга. 
+                  <svg class="blockquote__corner" width="40" height="60">
+                    <path d="M 40 0 40 12 0 60 0 0" fill="white"></path>
+                    <rect x="-18" width="30" height="24" rx="12" ry="12"></rect>
+                    <path d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0"></path>
+                  </svg>
+                </blockquote>
+                <p class="p">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.</p>
+                <p class="p">Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. </p>
+              </div>
+            </div>
+            <div class="section-article__frame">
+              <h3 class="h3 text-granite">Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведениябизнеса</h3>
+            </div>
+            <div class="inner-article">
+              <div class="inner-article__column inner-article__column_left"></div>
+              <div class="inner-article__column inner-article__column_right">
+                <p class="p">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.<br>Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <div class="download">
+                  <div class="download__title"></div>
+                  <div class="download__grid">
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                    <div class="download__card"><a class="card-download" href="#" download><img class="card-download__icon" src="images/pdf.png" width="55" height="63">
+                        <div class="card-download__desc">
+                          <div class="card-download__title">Великий Новгород , история</div>
+                          <div class="card-download__size">345 kB, doc</div>
+                        </div></a></div>
+                  </div>
+                </div>
+                <p class="p">При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).</p>
+              </div>
+            </div>
+            <div class="inner-article">
+              <div class="inner-article__column inner-article__column_left">
+                <div class="article-author-sm text-dark"><img class="article-author-sm__pr circle-img" src="images/success.jpg" width="100" height="100">
+                  <div class="article-author-sm__title h4">Александр Невзоров</div>
+                  <div class="article-author-sm__date">13  ДЕКАБРЯ 2017</div>
+                </div>
+              </div>
+              <div class="inner-article__column inner-article__column_right">
+                <blockquote class="blockquote blockquote_theme_forest-wolf text-dark paper-forest-wolf">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.
+                  <svg class="blockquote__corner" width="40" height="60">
+                    <path d="M 40 0 40 12 0 60 0 0"></path>
+                    <rect x="-18" width="30" height="24" rx="12" ry="12"></rect>
+                    <path d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0"></path>
+                  </svg>
+                </blockquote>
+                <p class="p">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.<br>Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <h4 class="h4 text-dark section-article__h4">Карта</h4>
+                <div class="section-article__map">
+                  <div style="height: 450px; background: gray;"></div>
+                </div>
+                <p class="p">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.<br>Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <div class="article-history-success">
+                  <div class="article-history-success__content">
+                    <div class="article-history-success__header"><img class="article-history-success__pr circle-img" src="images/success.jpg" width="178" heihgt="178">
+                      <div class="article-history-success__desc">
+                        <div class="article-history-success__title">Медовый дом</div>
+                        <div class="article-history-success__subtitle">Объем инвестиций — 40 млн. руб</div>
+                      </div>
+                    </div>
+                    <div class="article-history-success__text">Мы искали место, где бы фасовочное производство могло стабильно развиваться с оптимальными затратами. Наращивать его в Петербурге на арендованных площадях, цена которых растет геометрически, бесперспективно. </div><a href="#"><img class="article-history-success__more" src="images/imore.svg" width="26" height="26"></a>
+                  </div>
+                  <div class="article-history-success__bg" style="background-image: url('images/article-success-story.jpg');"></div>
+                </div>
+                <p class="p">Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Год</th>
+                      <th>Период заселения</th>
+                      <th>Численность населения</th>
+                      <th>Количество</th>
+                    </tr>
+                    <tr>
+                      <td>1571</td>
+                      <td>1998-2013</td>
+                      <td>Включено</td>
+                      <td>1 000 000</td>
+                    </tr>
+                    <tr>
+                      <td>1617</td>
+                      <td>1998-2014</td>
+                      <td>Включено</td>
+                      <td>1 500 000</td>
+                    </tr>
+                    <tr>
+                      <td>1811</td>
+                      <td>1998-2015</td>
+                      <td>Включено</td>
+                      <td>2 000 000</td>
+                    </tr>
+                    <tr>
+                      <td>1825</td>
+                      <td>1998-2016</td>
+                      <td>Включено</td>
+                      <td>2 500 000</td>
+                    </tr>
+                    <tr>
+                      <td>1833</td>
+                      <td>1998-2017</td>
+                      <td>Включено</td>
+                      <td>3 000 000</td>
+                    </tr>
+                    <tr>
+                      <td>1840</td>
+                      <td>1998-2018</td>
+                      <td>Включено</td>
+                      <td>3 500 000</td>
+                    </tr>
+                    <tr>
+                      <td>1856</td>
+                      <td>1998-2019</td>
+                      <td>Включено</td>
+                      <td>4 000 000</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="p text-quartz">На 1 января 2017 года по численности населения город находился на 92 месте из 1112</p>
+                <p class="p">За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <blockquote class="blockquote blockquote_theme_quartz text-dark">Великий Новгород расположен на Приильменской низменности, на реке Волхов, в 6 км от озера Ильмень, в 552 км к северо-западу от Москвы и в 145 км к юго-востоку от Санкт-Петербурга. 
+                  <div class="blockquote__separator"></div>
+                  <div class="blockquote__number">Номер закона</div>
+                  <div class="blockquote__date">дата принятия </div>
+                  <svg class="blockquote__corner" width="40" height="60">
+                    <path d="M 39 0 39 12 0 60 0 0" fill="white"></path>
+                    <rect x="-18" width="30" height="24" rx="12" ry="12"></rect>
+                    <path d="M 40 0 40 12 0 60 0 15 12 10 12 30 35 0"></path>
+                  </svg>
+                </blockquote>
+                <p class="p">При этом в 1136 году он стал первой вольной республикой на территории феодальной Руси (с этого момента, когда после сражения у Жданой горы князь Всеволод Мстиславич бежал с поля боя, полномочия новгородского князя были резко ограничены). Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).</p>
+                <div class="article-form">
+                  <div class="article-form__title">Хотите задать вопрос или получить поддержку</div>
+                  <div class="article-form__body">
+                    <div class="article-form__column article-form__column_left">
+                      <div class="ui-form-row">
+                        <div class="ui-form-row__label">Ваше имя</div>
+                        <input class="ui-form-row__field ui-field available" type="text">
+                      </div>
+                      <div class="ui-form-row">
+                        <div class="ui-form-row__label">Электронная почта</div>
+                        <input class="ui-form-row__field ui-field available" type="text">
+                      </div>
+                      <div class="ui-form-row">
+                        <div class="ui-form-row__label">телефон</div>
+                        <input class="ui-form-row__field ui-field available" type="text">
+                      </div>
+                    </div>
+                    <div class="article-form__column article-form__column_right">
+                      <div class="ui-form-row">
+                        <div class="ui-form-row__label">Комментарий</div>
+                        <textarea class="ui-form-row__field ui-textarea available --h-175"></textarea>
+                      </div>
+                      <div class="popup-form__form-foo">
+                        <div class="popup-form__form-foo-column">
+                          <label class="ui-row-checkbox popup-form__form-checkbox">
+                            <div class="ui-row-checkbox__box">
+                              <input type="checkbox">
+                            </div>
+                            <div class="ui-row-checkbox__label">Я согласен на обработку<br>персональных данных</div>
+                          </label>
+                        </div>
+                        <div class="popup-form__form-column">
+                          <button class="popup-form__form-foo-button button button_theme_white button_size_sm">Отправить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="p">Среднемесячная номинальная заработная плата в экономике города (без учёта организаций, относящихся к субъектам малого предпринимательства) в 2015 году составила 32,3 тыс. рублей и возросла на 3,6 % в сравнении с предыдущим годом.</p>
+                <div class="article-gallery-slider">
+                  <div class="article-gallery-slider__header text-dark">
+                    <h4 class="h4 article-gallery-slider__title">Фотогалерея</h4>
+                    <div class="article-gallery-slider__nav">
+                      <button class="article-slider__prev">
+                        <svg class="article-slider__icon" width="11" height="19" stroke="black" viewBox="0 0 11 18">
+                          <path d="M 9 0 10 1 3 9 10 16 9 17 1 9"></path>
+                        </svg>
+                      </button>
+                      <button class="article-slider__next">
+                        <svg class="article-slider__icon" width="11" height="19" stroke="black" viewBox="0 0 11 18">
+                          <path d="M 2 0 1 1 8 9 1 16 2 17 10 9"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="article-gallery-slider__body">
+                    <div class="swiper-container">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/1.jpg"></div>
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/2.jpg"></div>
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/3.jpg"></div>
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/1.jpg"></div>
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/2.jpg"></div>
+                        <div class="swiper-slide"><img class="fully-img" src="images/gallery/3.jpg"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="p">Экономические проблемы, обусловленные сложными макроэкономическими и геополитическими условиями настоящего времени, оказывают значительное влияние на рынок труда Великого Новгорода. За 2015 год численность безработных граждан увеличилась с 1634 до 2147 человек, уровень безработицы возрос с 1,24 % до 1,6 % к численности трудоспособного населения. Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <div class="article-edge text-dark">
+                  <h4 class="h4 article-edge__title">Инфографика</h4>
+                  <div class="article-edge__body">
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/12-dark.svg" width="39" height="48"></header>
+                        <div class="card-edge__title">400 МВт</div>
+                        <div class="card-edge__desc">доступные <br class="hidden visible-md">энергетические <br class="hidden visible-md">ресурсы</div>
+                      </div>
+                    </div>
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/3-dark.svg" width="48" height="47"></header>
+                        <div class="card-edge__title">100</div>
+                        <div class="card-edge__desc">инвестиционных <br class="hidden visible-md">площадок</div>
+                      </div>
+                    </div>
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/4-dark.svg" width="43" height="48"></header>
+                        <div class="card-edge__title">НТИ</div>
+                        <div class="card-edge__desc">пилотный <br class="hidden visible-md">регион НТИ</div>
+                      </div>
+                    </div>
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/11-dark.svg" width="48" height="47"></header>
+                        <div class="card-edge__title">8 млн.</div>
+                        <div class="card-edge__desc">кубических <br class="hidden visible-md">метров лесосеки</div>
+                      </div>
+                    </div>
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/7-dark.svg" width="43" height="47"></header>
+                        <div class="card-edge__title">13.5%</div>
+                        <div class="card-edge__desc">налог <br class="hidden visible-md">на прибыль</div>
+                      </div>
+                    </div>
+                    <div class="article-edge__card">
+                      <div class="card-edge">
+                        <header class="card-edge__header"><img class="card-edge__pr" src="images/edge/8-dark.svg" width="45" height="42"></header>
+                        <div class="card-edge__title">Льготы</div>
+                        <div class="card-edge__desc">для резидентов <br>индустриальных парков, <br class="hidden visible-md">технопарков, инкубаторов</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="p"> Для отрезка времени начиная с 1136 года и заканчивая 1478 годом, когда Новгород утратил (в результате победы московского князя Ивана III Великого над новгородцами в московско-новгородской войне 1477—1478 гг.) политическую самостоятельность, по отношению к Новгородской земле принято применять термин «Новгородская республика» (правительство последней использовало обозначение Господин Великий Новгород).</p>
+                <div class="article-gov" style="background-image: url(images/bg-article-gov.jpg);">
+                  <div class="article-gov__content">
+                    <div class="article-gov__position">Губернатор Новгородской области</div>
+                    <div class="article-gov__name">Андрей Сергеевич Никитин</div>
+                    <div class="article-gov__desc">Перед нами стоит задача сделать Новгородскую область smart регионом, где для каждой территории создаются индивидуальные условия для ведения бизнеса</div><a href="#"><img class="article-gov__more" src="images/imore.svg" width="40" heihgt="40"></a>
+                  </div>
+                </div>
+                <p class="p">Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <div class="article-success" style="background-image: url(images/bg-article-success.jpg);">
+                  <div class="article-success__content">
+                    <div class="article-success__title">История успеха <br>Иванова Ивана Ивановича</div>
+                    <div class="article-success__button button button_size_sm button_theme_white">Читать</div>
+                  </div>
+                </div>
+                <p class="p">Массовых увольнений в истекшем году не наблюдалось, однако с октября 2015 года было отмечено увеличение числа граждан, обратившихся в службу занятости населения и признанных безработными. Данная ситуация связана с оптимизацией штатной численности предприятий, перехода ряда хозяйствующих субъектов на режим неполного рабочего времени и снижением количества заявленных вакансий в ГОКУ «Центр занятости населения Великого Новгорода и Новгородского района».</p>
+                <div class="article-foo"><img src="images/share.png" alt="">
+                  <div class="article-author-lg text-dark"><img class="article-author-lg__pr circle-img" src="images/success.jpg" width="100" height="100">
+                    <div>
+                      <div class="article-author-lg__title h4">Александр Невзоров</div>
+                      <div class="article-author-lg__date">13  ДЕКАБРЯ 2017</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-arhive"><a class="button button_size_sm button_outline button_theme_outline-dark article-arhive__button" href="#">АНОНСЫ СОБЫТИЙ</a>
+                  <div class="article-arhive__body">
+                    <div class="article-arhive__cards">
+                      <div class="article-arhive__card">
+                        <div class="card-archive"><a class="card-archive__column card-archive__column_pr" href="#"><img class="card-archive__pr" src="images/news/1.jpg" width="135" height="135"></a>
+                          <div class="card-archive__column card-archive__column_desc">
+                            <time class="card-archive__date">13  ДЕКАБРЯ 2017</time><a class="card-archive__title" href="#">Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="article-arhive__card">
+                        <div class="card-archive"><a class="card-archive__column card-archive__column_pr" href="#"><img class="card-archive__pr" src="images/news/1.jpg" width="135" height="135"></a>
+                          <div class="card-archive__column card-archive__column_desc">
+                            <time class="card-archive__date">13  ДЕКАБРЯ 2017</time><a class="card-archive__title" href="#">Приглашаем в Москву на выставку «ИнваЭкспо. Общество для всех»</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="article-arhive__card">
+                        <div class="card-archive"><a class="card-archive__column card-archive__column_pr" href="#"><img class="card-archive__pr" src="images/news/2.jpg" width="135" height="135"></a>
+                          <div class="card-archive__column card-archive__column_desc">
+                            <time class="card-archive__date">5–10  МАРТА 2018</time><a class="card-archive__title" href="#">Принимаем заявки на бизнес-миссию новгородских предпринимателей в Токио</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="article-arhive__card">
+                        <div class="card-archive"><a class="card-archive__column card-archive__column_pr" href="#"><img class="card-archive__pr" src="images/news/3.jpg" width="135" height="135"></a>
+                          <div class="card-archive__column card-archive__column_desc">
+                            <time class="card-archive__date">5–6  ДЕКАБРЯ 2018</time><a class="card-archive__title" href="#">Принимаем заявки на бизнес-миссию новгородских предпринимателей в Токио</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="section-foo section">
+        <div class="section__container section-foo__container">
+          <div class="section-foo__column section-foo__column_logo"><img class="section-foo__logo" src="images/logo.png" width="60" height="66" alt="Логотип"></div>
+          <div class="section-foo__column section-foo__column_copy">
+            <div class="section-foo__copy">Агентство развития новгородской области 2018</div>
+          </div>
+          <div class="section-foo__column section-foo__column_social">
+            <nav class="nav-social">
+              <ul class="nav-social__list">
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="41" height="41" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social__path" d="M35.11,28.16H30.56V44.38H23.82V28.16H20.61V22.43h3.21V18.72c0-2.65,1.26-6.8,6.8-6.8l5,0V17.5H32a1.37,1.37,0,0,0-1.43,1.56v3.37H35.7Zm0,0" fill="#f0f1f1"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="41" height="41" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social__path" d="M44.56,21.58a4.9,4.9,0,0,0-4.9-4.91h-23a4.9,4.9,0,0,0-4.9,4.91V34.73a4.9,4.9,0,0,0,4.9,4.91h23a4.9,4.9,0,0,0,4.9-4.91ZM24.87,33.7V21.35l9.37,6.18Zm0,0" fill="#f0f1f1" fill-rule="evenodd"></path>
+                    </svg></a></li>
+                <li class="nav-social__item"><a class="nav-social__link" href="#">
+                    <svg class="nav-social__icon icon-social-dark" width="41" height="41" viewBox="0 0 56.3 56.3">
+                      <path class="icon-social__path" d="M39.28,14.24H17A2.79,2.79,0,0,0,14.24,17V39.28A2.79,2.79,0,0,0,17,42.06H39.28a2.79,2.79,0,0,0,2.78-2.79V17a2.79,2.79,0,0,0-2.78-2.78ZM28.15,22.59a5.56,5.56,0,1,1-5.56,5.56,5.57,5.57,0,0,1,5.56-5.56ZM17.72,39.28a.66.66,0,0,1-.69-.69V26.76h2.92a4.63,4.63,0,0,0-.14,1.39,8.35,8.35,0,1,0,16.69,0,4.65,4.65,0,0,0-.14-1.39h2.92V38.58a.66.66,0,0,1-.69.69ZM39.28,20.51a.66.66,0,0,1-.69.69H35.8a.66.66,0,0,1-.69-.69V17.72A.66.66,0,0,1,35.8,17h2.79a.66.66,0,0,1,.69.69Zm0,0" fill="#fff"></path>
+                    </svg></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div hidden>
+      <div class="popup-form" id="popup-form-1">
+        <div class="section">
+          <div class="section__container popup-form__container">
+            <div class="popup-form__header"><img class="popup-form__pr" src="images/nikitin.png" width="178" height="178" alt="">
+              <h2 class="h2 popup-form__title">Вопрос губернатору <br>Новгородской области</h2>
+            </div>
+            <div class="popup-form__body">
+              <div class="popup-form__column popup-form__column_left">
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Ваше имя</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Электронная почта</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">телефон</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+              </div>
+              <div class="popup-form__column popup-form__column_right">
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Ваш вопрос</div>
+                  <textarea class="ui-form-row__field ui-textarea available --h-175"></textarea>
+                </div>
+                <div class="popup-form__form-foo">
+                  <div class="popup-form__form-column">
+                    <label class="ui-row-checkbox popup-form__form-checkbox">
+                      <div class="ui-row-checkbox__box">
+                        <input type="checkbox">
+                      </div>
+                      <div class="ui-row-checkbox__label">Я согласен на обработку<br>персональных данных</div>
+                    </label>
+                  </div>
+                  <div class="popup-form__form-column">
+                    <button class="button button_theme_white button_size_sm --w-340">Отправить </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-form" id="popup-form-2">
+        <div class="section">
+          <div class="section__container popup-form__container">
+            <div class="popup-form__header">
+              <h2 class="h2 popup-form__title">Получить поддержку</h2>
+            </div>
+            <div class="ui-form-row">
+              <div class="ui-form-row">Шаг 1</div>
+            </div>
+            <div class="popup-form__body">
+              <div class="popup-form__column popup-form__column_left">
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Ваше имя</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Электронная почта</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">телефон</div>
+                  <input class="ui-form-row__field ui-field available" type="text">
+                </div>
+              </div>
+              <div class="popup-form__column popup-form__column_right">
+                <div class="ui-form-row">
+                  <div class="ui-form-row__label">Комментарий</div>
+                  <textarea class="ui-form-row__field ui-textarea available --h-175"></textarea>
+                </div>
+                <div class="popup-form__form-foo">
+                  <div class="popup-form__form-foo-column">
+                    <label class="ui-row-checkbox popup-form__form-checkbox">
+                      <div class="ui-row-checkbox__box">
+                        <input type="checkbox">
+                      </div>
+                      <div class="ui-row-checkbox__label">Я согласен на обработку<br>персональных данных</div>
+                    </label>
+                  </div>
+                  <div class="popup-form__form-column">
+                    <button class="popup-form__form-foo-button button button_theme_white button_size_sm">У меня еще нет проекта</button>
+                    <button class="popup-form__form-foo-button button button_theme_white button_size_sm">У меня уже есть проект</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="js/flat.menu.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
